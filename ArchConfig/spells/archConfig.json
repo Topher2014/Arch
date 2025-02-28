@@ -1,0 +1,29 @@
+{
+    "name": "archConfig",
+    "description": "A spell to configure a new Arch instance",
+    "identity": "topherludlow@protonmail.com",
+    "$schema": "https://spellcaster.sh/schema.json",
+    "license": "accept",
+    "trigraphs": [
+      {
+        "#": "multilib should be enabled in pacman conf",
+        "?": "grep -A1 '^\\[multilib\\]$' /etc/pacman.conf | grep -q '^Include = /etc/pacman.d/mirrorlist$'",
+        "!": "sudo sed -i '/^#\\[multilib\\]/{N;s/^#\\[multilib\\]\\n#Include/[multilib]\\nInclude/}' /etc/pacman.conf && sudo pacman -Sy --noconfirm" 
+      },
+      {
+        "#": "32 bit Nvidia drivers should be installed",
+        "?": "pacman -Q lib32-nvidia-utils",
+        "!": "sudo pacman -S lib32-nvidia-utils --noconfirm"
+      },
+      {
+        "#": "en_US.UTF-8 locale should be generated",
+        "?": "locale --all-locales | grep -q \"en_US.utf8\"",
+        "!": "sudo sed -i 's/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && sudo locale-gen"
+      },
+      {
+        "#": "Steam should be installed",
+        "?": "pacman -Q steam",
+        "!": "sudo pacman -S steam --noconfirm"
+      }
+    ]
+  }
