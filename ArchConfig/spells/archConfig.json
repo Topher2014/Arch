@@ -24,6 +24,76 @@
         "#": "Steam should be installed",
         "?": "pacman -Q steam",
         "!": "sudo pacman -S steam --noconfirm"
+      },
+      {
+        "#": "Hostname should be set to topherDesktop",
+        "?": "grep -qw \"topherDesktop\" /etc/hostname",
+        "!": "echo \"topherDesktop\" | sudo tee /etc/hostname"
+      },
+      {
+        "#": "Hosts should be set in /etc/hosts",
+        "?": "grep -qF -x \"127.0.0.1 localhost\" /etc/hosts && grep -qF -x \"::1 localhost\" /etc/hosts",
+        "!": "echo -e \"127.0.0.1 localhost\n::1 localhost\n\" | sudo tee -a /etc/hosts"
+      },
+      {
+        "#": "dhcpcd@ETHERNET.service should be enabled",
+        "?": "sudo systemctl is-enabled dhcpcd@$(ip -o link show | grep -E 'eth|enp|eno|ens' | head -n 1 | awk -F': ' '{print $2}').service",
+        "!": "sudo systemctl enable dhcpcd@$(ip -o link show | grep -E 'eth|enp|eno|ens' | head -n 1 | awk -F': ' '{print $2}').service"
+      },
+      {
+        "#": "dhcpcd@ETHERNET.service should be started",
+        "?": "sudo systemctl is-active dhcpcd@$(ip -o link show | grep -E 'eth|enp|eno|ens' | head -n 1 | awk -F': ' '{print $2}').service",
+        "!": "sudo systemctl start dhcpcd@$(ip -o link show | grep -E 'eth|enp|eno|ens' | head -n 1 | awk -F': ' '{print $2}').service"
+      },
+      {
+        "#": "dhcpcd should be installed",
+        "?": "pacman -Q dhcpcd",
+        "!": "sudo pacman -S dhcpcd --noconfirm"
+      },
+      {
+        "#": "User 'topher' should exist",
+        "?": "id topher",
+        "!": "sudo useradd -m -p '$6$b4dZZN3tfiGwTEkG$Cl2ImbiCz3M8RYUZWuYo0zU0/.wBVPlO3pVntDl0WOlwnI9dmHTnBgoRghyadF0lSrpARhnlHbjYR2gt0iq971' topher"
+      },
+      {
+        "#": "Git should be installed",
+        "?": "pacman -Q git",
+        "!": "sudo pacman -S git --noconfirm"
+      },
+      {
+        "#": "Yay repo should be cloned to /tmp/yay",
+        "?": "test -f /tmp/yay/PKGBUILD",
+        "!": "git clone https://aur.archlinux.org/yay.git /tmp/yay && chown -R topher:topher /tmp/yay"
+      },
+      {
+        "#": "Yay package should be built",
+        "?": "test -n \"$(find /tmp/yay -name \"yay-*-x86_64.pkg.tar.zst\" -not -name \"*debug*\")\"",
+        "!": "su - topher -c \"cd /tmp/yay && makepkg -s\""
+      },
+      {
+        "#": "Yay should be installed and removed",
+        "?": "pacman -Q yay",
+        "!": "(find /tmp/yay -name \"yay-*.pkg.tar.zst\" -not -name \"*debug*\" | xargs pacman -U --noconfirm) && rm -r /tmp/yay" 
+      },
+      {
+        "#": "Spotify PKGBUILD should be downloaded",
+        "?": "test -f /tmp/spotify/PKGBUILD",
+        "!": "su - topher -c \"cd /tmp && yay -G spotify\""
+      },
+      {
+        "#": "Spotify package should be built",
+        "?": "test -n \"$(find /tmp/spotify -name \"spotify-*-x86_64.pkg.tar.zst\" -not -name \"*debug*\")\"",
+        "!": "su - topher -c \"cd /tmp/spotify && makepkg -s --skippgpcheck\""
+      },
+      {
+        "#": "Spotify dependencies should be installed",
+        "?": "test -f /tmp/spotify/PKGBUILD && grep \"^depends\\|^makedepends\" /tmp/spotify/PKGBUILD | sed -e \"s/^depends=(//g\" -e \"s/^makedepends=(//g\" -e \"s/)$//g\" | tr \"'\" \" \" | tr -s ' ' '\\n' | sed '/^$/d' | sed 's/>.*$//' | xargs pacman -Q",
+        "!": "grep \"^depends\\|^makedepends\" /tmp/spotify/PKGBUILD | sed -e \"s/^depends=(//g\" -e \"s/^makedepends=(//g\" -e \"s/)$//g\" | tr \"'\" \" \" | tr -s ' ' '\\n' | sed '/^$/d' | sed 's/>.*$//' | xargs pacman -S --noconfirm"
+      },
+      {
+        "#": "Yay dependencies should be installed",
+        "?": "test -f /tmp/yay/PKGBUILD && grep \"^depends\\|^makedepends\" /tmp/yay/PKGBUILD | sed -e \"s/^depends=(//g\" -e \"s/^makedepends=(//g\" -e \"s/)$//g\" | tr \"'\" \" \" | awk '{print $1}' | sed 's/>.*$//' | xargs pacman -Q",
+        "!": "grep \"^depends\\|^makedepends\" /tmp/yay/PKGBUILD | sed -e \"s/^depends=(//g\" -e \"s/^makedepends=(//g\" -e \"s/)$//g\" | tr \"'\" \" \" | awk '{print $1}' | sed 's/>.*$//' | xargs pacman -S --noconfirm"
       }
     ]
   }
