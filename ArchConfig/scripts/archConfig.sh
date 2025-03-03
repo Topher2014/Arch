@@ -4,7 +4,7 @@
 # © 2023, Distinguished LLC. All rights reserved.
 
 # Name: archConfig
-# ID: fc87db89-ec4c-430a-a1e7-fe3beabd3283
+# ID: fca17aee-faf8-4874-8da5-da74e795c5b0
 # Description: A spell to configure a new Arch instance
 # Identity: topherludlow@protonmail.com
 
@@ -21,61 +21,31 @@ __)|_)(/_||(_(_|_> |_(/_|
 EOF
 
 echo -e "Name: archConfig"
-echo -e "ID: fc87db89-ec4c-430a-a1e7-fe3beabd3283"
+echo -e "ID: fca17aee-faf8-4874-8da5-da74e795c5b0"
 echo -e "Description: A spell to configure a new Arch instance"
 echo -e "Identity: topherludlow@protonmail.com"
-echo -e "Converging 20 resources..."
+echo -e "Converging 25 resources..."
 converge=''
 cycle=0
-converged="$(printf "\xE2\x98\xB1%.0s "  $(seq 20))"
+converged="$(printf "\xE2\x98\xB1%.0s "  $(seq 25))"
 echo -en "\033[0m"
 
-while [ "$converge" != "$converged" ] && [ $cycle -le 20 ]
+while [ "$converge" != "$converged" ] && [ $cycle -le 25 ]
   do
     converge=''
-    if (pacman -Q dhcpcd > /dev/null)
+    if (test -f /tmp/spotify/PKGBUILD > /dev/null)
     then
       c_exit=0
       echo -en "\033[0;32m"
-      echo -e "  \xE2\x9C\x93 dhcpcd should be installed"
+      echo -e "  \xE2\x9C\x93 Spotify PKGBUILD should be downloaded"
       echo -en "\033[0m"
       u_exit=1
     else
       c_exit=1
       echo -en "\033[0;31m"
-      echo -e "  \xE2\x9C\x97 dhcpcd should be installed"
+      echo -e "  \xE2\x9C\x97 Spotify PKGBUILD should be downloaded"
       echo -en "\033[0m"
-      u_out=$(sudo pacman -S dhcpcd --noconfirm)
-      u_exit=$?
-    fi
-    r_exit=$?
-    # echo "$r_exit$c_exit$u_exit"
-    # set any non zero value as 1 for read 
-    if [ $r_exit -ne 0 ]; then r_exit=1; fi
-    case "$r_exit$c_exit$u_exit" in
-    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
-    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
-    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
-    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
-    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
-    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
-    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
-    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
-    esac
-
-    if (test -d /home/topher/Desktop/Screenshots > /dev/null)
-    then
-      c_exit=0
-      echo -en "\033[0;32m"
-      echo -e "  \xE2\x9C\x93 /home/topher/Desktop/Screenshots directory should exist"
-      echo -en "\033[0m"
-      u_exit=1
-    else
-      c_exit=1
-      echo -en "\033[0;31m"
-      echo -e "  \xE2\x9C\x97 /home/topher/Desktop/Screenshots directory should exist"
-      echo -en "\033[0m"
-      u_out=$(mkdir /home/topher/Desktop && mkdir /home/topher/Desktop/Screenshots)
+      u_out=$(su - topher -c "cd /tmp && yay -G spotify")
       u_exit=$?
     fi
     r_exit=$?
@@ -106,6 +76,36 @@ while [ "$converge" != "$converged" ] && [ $cycle -le 20 ]
       echo -e "  \xE2\x9C\x97 Steam should be installed"
       echo -en "\033[0m"
       u_out=$(sudo pacman -S steam --noconfirm)
+      u_exit=$?
+    fi
+    r_exit=$?
+    # echo "$r_exit$c_exit$u_exit"
+    # set any non zero value as 1 for read 
+    if [ $r_exit -ne 0 ]; then r_exit=1; fi
+    case "$r_exit$c_exit$u_exit" in
+    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
+    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
+    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
+    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
+    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
+    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
+    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
+    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
+    esac
+
+    if (sudo systemctl is-active dhcpcd@$(ip -o link show | grep -E 'eth|enp|eno|ens' | head -n 1 | awk -F': ' '{print $2}').service > /dev/null)
+    then
+      c_exit=0
+      echo -en "\033[0;32m"
+      echo -e "  \xE2\x9C\x93 dhcpcd@ETHERNET.service should be started"
+      echo -en "\033[0m"
+      u_exit=1
+    else
+      c_exit=1
+      echo -en "\033[0;31m"
+      echo -e "  \xE2\x9C\x97 dhcpcd@ETHERNET.service should be started"
+      echo -en "\033[0m"
+      u_out=$(sudo systemctl start dhcpcd@$(ip -o link show | grep -E 'eth|enp|eno|ens' | head -n 1 | awk -F': ' '{print $2}').service)
       u_exit=$?
     fi
     r_exit=$?
@@ -155,19 +155,19 @@ while [ "$converge" != "$converged" ] && [ $cycle -le 20 ]
     111) converge="$converge$(printf "\xE2\x98\xB7") ";;
     esac
 
-    if (grep -qw "topherDesktop" /etc/hostname > /dev/null)
+    if (test -f /home/topher/.config/user-dirs.dirs > /dev/null)
     then
       c_exit=0
       echo -en "\033[0;32m"
-      echo -e "  \xE2\x9C\x93 Hostname should be set to topherDesktop"
+      echo -e "  \xE2\x9C\x93 user-dirs.dirs should exist in .config"
       echo -en "\033[0m"
       u_exit=1
     else
       c_exit=1
       echo -en "\033[0;31m"
-      echo -e "  \xE2\x9C\x97 Hostname should be set to topherDesktop"
+      echo -e "  \xE2\x9C\x97 user-dirs.dirs should exist in .config"
       echo -en "\033[0m"
-      u_out=$(echo "topherDesktop" | sudo tee /etc/hostname)
+      u_out=$(su - topher -c 'curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.config/user-dirs.dirs >> /home/topher/.config/user-dirs.dirs')
       u_exit=$?
     fi
     r_exit=$?
@@ -185,319 +185,19 @@ while [ "$converge" != "$converged" ] && [ $cycle -le 20 ]
     111) converge="$converge$(printf "\xE2\x98\xB7") ";;
     esac
 
-    if (grep -A1 '^\[multilib\]$' /etc/pacman.conf | grep -q '^Include = /etc/pacman.d/mirrorlist$' > /dev/null)
+    if (test -f /home/topher/.config/user-dirs.locale > /dev/null)
     then
       c_exit=0
       echo -en "\033[0;32m"
-      echo -e "  \xE2\x9C\x93 multilib should be enabled in pacman conf"
+      echo -e "  \xE2\x9C\x93 user-dirs.locale should exist in .config"
       echo -en "\033[0m"
       u_exit=1
     else
       c_exit=1
       echo -en "\033[0;31m"
-      echo -e "  \xE2\x9C\x97 multilib should be enabled in pacman conf"
+      echo -e "  \xE2\x9C\x97 user-dirs.locale should exist in .config"
       echo -en "\033[0m"
-      u_out=$(sudo sed -i '/^#\[multilib\]/{N;s/^#\[multilib\]\n#Include/[multilib]\nInclude/}' /etc/pacman.conf && sudo pacman -Sy --noconfirm)
-      u_exit=$?
-    fi
-    r_exit=$?
-    # echo "$r_exit$c_exit$u_exit"
-    # set any non zero value as 1 for read 
-    if [ $r_exit -ne 0 ]; then r_exit=1; fi
-    case "$r_exit$c_exit$u_exit" in
-    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
-    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
-    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
-    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
-    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
-    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
-    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
-    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
-    esac
-
-    if (pacman -Q base-devel > /dev/null)
-    then
-      c_exit=0
-      echo -en "\033[0;32m"
-      echo -e "  \xE2\x9C\x93 base-devel should be installed"
-      echo -en "\033[0m"
-      u_exit=1
-    else
-      c_exit=1
-      echo -en "\033[0;31m"
-      echo -e "  \xE2\x9C\x97 base-devel should be installed"
-      echo -en "\033[0m"
-      u_out=$(sudo pacman -S base-devel --noconfirm)
-      u_exit=$?
-    fi
-    r_exit=$?
-    # echo "$r_exit$c_exit$u_exit"
-    # set any non zero value as 1 for read 
-    if [ $r_exit -ne 0 ]; then r_exit=1; fi
-    case "$r_exit$c_exit$u_exit" in
-    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
-    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
-    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
-    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
-    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
-    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
-    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
-    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
-    esac
-
-    if (test -f /tmp/yay/PKGBUILD > /dev/null)
-    then
-      c_exit=0
-      echo -en "\033[0;32m"
-      echo -e "  \xE2\x9C\x93 Yay repo should be cloned to /tmp/yay"
-      echo -en "\033[0m"
-      u_exit=1
-    else
-      c_exit=1
-      echo -en "\033[0;31m"
-      echo -e "  \xE2\x9C\x97 Yay repo should be cloned to /tmp/yay"
-      echo -en "\033[0m"
-      u_out=$(git clone https://aur.archlinux.org/yay.git /tmp/yay && chown -R topher:topher /tmp/yay)
-      u_exit=$?
-    fi
-    r_exit=$?
-    # echo "$r_exit$c_exit$u_exit"
-    # set any non zero value as 1 for read 
-    if [ $r_exit -ne 0 ]; then r_exit=1; fi
-    case "$r_exit$c_exit$u_exit" in
-    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
-    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
-    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
-    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
-    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
-    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
-    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
-    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
-    esac
-
-    if (test -n "$(find /tmp/spotify -name "spotify-*-x86_64.pkg.tar.zst" -not -name "*debug*")" > /dev/null)
-    then
-      c_exit=0
-      echo -en "\033[0;32m"
-      echo -e "  \xE2\x9C\x93 Spotify package should be built"
-      echo -en "\033[0m"
-      u_exit=1
-    else
-      c_exit=1
-      echo -en "\033[0;31m"
-      echo -e "  \xE2\x9C\x97 Spotify package should be built"
-      echo -en "\033[0m"
-      u_out=$(su - topher -c "cd /tmp/spotify && makepkg -s --skippgpcheck")
-      u_exit=$?
-    fi
-    r_exit=$?
-    # echo "$r_exit$c_exit$u_exit"
-    # set any non zero value as 1 for read 
-    if [ $r_exit -ne 0 ]; then r_exit=1; fi
-    case "$r_exit$c_exit$u_exit" in
-    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
-    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
-    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
-    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
-    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
-    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
-    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
-    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
-    esac
-
-    if (test -f /tmp/spotify/PKGBUILD && grep "^depends\|^makedepends" /tmp/spotify/PKGBUILD | sed -e "s/^depends=(//g" -e "s/^makedepends=(//g" -e "s/)$//g" | tr "'" " " | tr -s ' ' '\n' | sed '/^$/d' | sed 's/>.*$//' | xargs pacman -Q > /dev/null)
-    then
-      c_exit=0
-      echo -en "\033[0;32m"
-      echo -e "  \xE2\x9C\x93 Spotify dependencies should be installed"
-      echo -en "\033[0m"
-      u_exit=1
-    else
-      c_exit=1
-      echo -en "\033[0;31m"
-      echo -e "  \xE2\x9C\x97 Spotify dependencies should be installed"
-      echo -en "\033[0m"
-      u_out=$(grep "^depends\|^makedepends" /tmp/spotify/PKGBUILD | sed -e "s/^depends=(//g" -e "s/^makedepends=(//g" -e "s/)$//g" | tr "'" " " | tr -s ' ' '\n' | sed '/^$/d' | sed 's/>.*$//' | xargs pacman -S --noconfirm)
-      u_exit=$?
-    fi
-    r_exit=$?
-    # echo "$r_exit$c_exit$u_exit"
-    # set any non zero value as 1 for read 
-    if [ $r_exit -ne 0 ]; then r_exit=1; fi
-    case "$r_exit$c_exit$u_exit" in
-    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
-    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
-    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
-    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
-    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
-    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
-    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
-    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
-    esac
-
-    if (sudo systemctl is-enabled dhcpcd@$(ip -o link show | grep -E 'eth|enp|eno|ens' | head -n 1 | awk -F': ' '{print $2}').service > /dev/null)
-    then
-      c_exit=0
-      echo -en "\033[0;32m"
-      echo -e "  \xE2\x9C\x93 dhcpcd@ETHERNET.service should be enabled"
-      echo -en "\033[0m"
-      u_exit=1
-    else
-      c_exit=1
-      echo -en "\033[0;31m"
-      echo -e "  \xE2\x9C\x97 dhcpcd@ETHERNET.service should be enabled"
-      echo -en "\033[0m"
-      u_out=$(sudo systemctl enable dhcpcd@$(ip -o link show | grep -E 'eth|enp|eno|ens' | head -n 1 | awk -F': ' '{print $2}').service)
-      u_exit=$?
-    fi
-    r_exit=$?
-    # echo "$r_exit$c_exit$u_exit"
-    # set any non zero value as 1 for read 
-    if [ $r_exit -ne 0 ]; then r_exit=1; fi
-    case "$r_exit$c_exit$u_exit" in
-    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
-    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
-    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
-    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
-    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
-    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
-    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
-    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
-    esac
-
-    if (test -n "$(find /tmp/yay -name "yay-*-x86_64.pkg.tar.zst" -not -name "*debug*")" > /dev/null)
-    then
-      c_exit=0
-      echo -en "\033[0;32m"
-      echo -e "  \xE2\x9C\x93 Yay package should be built"
-      echo -en "\033[0m"
-      u_exit=1
-    else
-      c_exit=1
-      echo -en "\033[0;31m"
-      echo -e "  \xE2\x9C\x97 Yay package should be built"
-      echo -en "\033[0m"
-      u_out=$(su - topher -c "cd /tmp/yay && makepkg -s")
-      u_exit=$?
-    fi
-    r_exit=$?
-    # echo "$r_exit$c_exit$u_exit"
-    # set any non zero value as 1 for read 
-    if [ $r_exit -ne 0 ]; then r_exit=1; fi
-    case "$r_exit$c_exit$u_exit" in
-    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
-    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
-    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
-    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
-    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
-    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
-    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
-    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
-    esac
-
-    if (locale --all-locales | grep -q "en_US.utf8" > /dev/null)
-    then
-      c_exit=0
-      echo -en "\033[0;32m"
-      echo -e "  \xE2\x9C\x93 en_US.UTF-8 locale should be generated"
-      echo -en "\033[0m"
-      u_exit=1
-    else
-      c_exit=1
-      echo -en "\033[0;31m"
-      echo -e "  \xE2\x9C\x97 en_US.UTF-8 locale should be generated"
-      echo -en "\033[0m"
-      u_out=$(sudo sed -i 's/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && sudo locale-gen)
-      u_exit=$?
-    fi
-    r_exit=$?
-    # echo "$r_exit$c_exit$u_exit"
-    # set any non zero value as 1 for read 
-    if [ $r_exit -ne 0 ]; then r_exit=1; fi
-    case "$r_exit$c_exit$u_exit" in
-    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
-    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
-    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
-    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
-    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
-    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
-    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
-    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
-    esac
-
-    if (test -f /tmp/yay/PKGBUILD && grep "^depends\|^makedepends" /tmp/yay/PKGBUILD | sed -e "s/^depends=(//g" -e "s/^makedepends=(//g" -e "s/)$//g" | tr "'" " " | awk '{print $1}' | sed 's/>.*$//' | xargs pacman -Q > /dev/null)
-    then
-      c_exit=0
-      echo -en "\033[0;32m"
-      echo -e "  \xE2\x9C\x93 Yay dependencies should be installed"
-      echo -en "\033[0m"
-      u_exit=1
-    else
-      c_exit=1
-      echo -en "\033[0;31m"
-      echo -e "  \xE2\x9C\x97 Yay dependencies should be installed"
-      echo -en "\033[0m"
-      u_out=$(grep "^depends\|^makedepends" /tmp/yay/PKGBUILD | sed -e "s/^depends=(//g" -e "s/^makedepends=(//g" -e "s/)$//g" | tr "'" " " | awk '{print $1}' | sed 's/>.*$//' | xargs pacman -S --noconfirm)
-      u_exit=$?
-    fi
-    r_exit=$?
-    # echo "$r_exit$c_exit$u_exit"
-    # set any non zero value as 1 for read 
-    if [ $r_exit -ne 0 ]; then r_exit=1; fi
-    case "$r_exit$c_exit$u_exit" in
-    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
-    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
-    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
-    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
-    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
-    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
-    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
-    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
-    esac
-
-    if (sudo systemctl is-active dhcpcd@$(ip -o link show | grep -E 'eth|enp|eno|ens' | head -n 1 | awk -F': ' '{print $2}').service > /dev/null)
-    then
-      c_exit=0
-      echo -en "\033[0;32m"
-      echo -e "  \xE2\x9C\x93 dhcpcd@ETHERNET.service should be started"
-      echo -en "\033[0m"
-      u_exit=1
-    else
-      c_exit=1
-      echo -en "\033[0;31m"
-      echo -e "  \xE2\x9C\x97 dhcpcd@ETHERNET.service should be started"
-      echo -en "\033[0m"
-      u_out=$(sudo systemctl start dhcpcd@$(ip -o link show | grep -E 'eth|enp|eno|ens' | head -n 1 | awk -F': ' '{print $2}').service)
-      u_exit=$?
-    fi
-    r_exit=$?
-    # echo "$r_exit$c_exit$u_exit"
-    # set any non zero value as 1 for read 
-    if [ $r_exit -ne 0 ]; then r_exit=1; fi
-    case "$r_exit$c_exit$u_exit" in
-    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
-    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
-    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
-    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
-    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
-    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
-    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
-    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
-    esac
-
-    if (test -f /tmp/spotify/PKGBUILD > /dev/null)
-    then
-      c_exit=0
-      echo -en "\033[0;32m"
-      echo -e "  \xE2\x9C\x93 Spotify PKGBUILD should be downloaded"
-      echo -en "\033[0m"
-      u_exit=1
-    else
-      c_exit=1
-      echo -en "\033[0;31m"
-      echo -e "  \xE2\x9C\x97 Spotify PKGBUILD should be downloaded"
-      echo -en "\033[0m"
-      u_out=$(su - topher -c "cd /tmp && yay -G spotify")
+      u_out=$(su - topher -c 'locale | grep LANG | cut -d= -f2 | tr -d "\"" > ~/.config/user-dirs.locale')
       u_exit=$?
     fi
     r_exit=$?
@@ -545,19 +245,19 @@ while [ "$converge" != "$converged" ] && [ $cycle -le 20 ]
     111) converge="$converge$(printf "\xE2\x98\xB7") ";;
     esac
 
-    if (pacman -Q lib32-nvidia-utils > /dev/null)
+    if (pacman -Q dhcpcd > /dev/null)
     then
       c_exit=0
       echo -en "\033[0;32m"
-      echo -e "  \xE2\x9C\x93 32 bit Nvidia drivers should be installed"
+      echo -e "  \xE2\x9C\x93 dhcpcd should be installed"
       echo -en "\033[0m"
       u_exit=1
     else
       c_exit=1
       echo -en "\033[0;31m"
-      echo -e "  \xE2\x9C\x97 32 bit Nvidia drivers should be installed"
+      echo -e "  \xE2\x9C\x97 dhcpcd should be installed"
       echo -en "\033[0m"
-      u_out=$(sudo pacman -S lib32-nvidia-utils --noconfirm)
+      u_out=$(sudo pacman -S dhcpcd --noconfirm)
       u_exit=$?
     fi
     r_exit=$?
@@ -575,19 +275,19 @@ while [ "$converge" != "$converged" ] && [ $cycle -le 20 ]
     111) converge="$converge$(printf "\xE2\x98\xB7") ";;
     esac
 
-    if (pacman -Q git > /dev/null)
+    if (test -f /home/topher/.config/user-dirs.conf -a -f /home/topher/.config/user-dirs.locale -a -f /home/topher/.config/user-dirs.dirs -a -d /home/topher/Desktop > /dev/null)
     then
       c_exit=0
       echo -en "\033[0;32m"
-      echo -e "  \xE2\x9C\x93 Git should be installed"
+      echo -e "  \xE2\x9C\x93 xdg-user-dirs-update --force should be ran after .config files and dirctories exist"
       echo -en "\033[0m"
       u_exit=1
     else
       c_exit=1
       echo -en "\033[0;31m"
-      echo -e "  \xE2\x9C\x97 Git should be installed"
+      echo -e "  \xE2\x9C\x97 xdg-user-dirs-update --force should be ran after .config files and dirctories exist"
       echo -en "\033[0m"
-      u_out=$(sudo pacman -S git --noconfirm)
+      u_out=$(su - topher -c 'source ~/.config/user-dirs.dirs && mkdir -p "$XDG_DESKTOP_DIR" "$XDG_DOCUMENTS_DIR" "$XDG_DOWNLOADS_DIR"')
       u_exit=$?
     fi
     r_exit=$?
@@ -635,6 +335,457 @@ while [ "$converge" != "$converged" ] && [ $cycle -le 20 ]
     111) converge="$converge$(printf "\xE2\x98\xB7") ";;
     esac
 
+    if (grep -A1 '^\[multilib\]$' /etc/pacman.conf | grep -q '^Include = /etc/pacman.d/mirrorlist$' > /dev/null)
+    then
+      c_exit=0
+      echo -en "\033[0;32m"
+      echo -e "  \xE2\x9C\x93 multilib should be enabled in pacman conf"
+      echo -en "\033[0m"
+      u_exit=1
+    else
+      c_exit=1
+      echo -en "\033[0;31m"
+      echo -e "  \xE2\x9C\x97 multilib should be enabled in pacman conf"
+      echo -en "\033[0m"
+      u_out=$(sudo sed -i '/^#\[multilib\]/{N;s/^#\[multilib\]\n#Include/[multilib]\nInclude/}' /etc/pacman.conf && sudo pacman -Sy --noconfirm)
+      u_exit=$?
+    fi
+    r_exit=$?
+    # echo "$r_exit$c_exit$u_exit"
+    # set any non zero value as 1 for read 
+    if [ $r_exit -ne 0 ]; then r_exit=1; fi
+    case "$r_exit$c_exit$u_exit" in
+    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
+    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
+    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
+    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
+    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
+    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
+    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
+    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
+    esac
+
+    if (test -d /home/topher/.config > /dev/null)
+    then
+      c_exit=0
+      echo -en "\033[0;32m"
+      echo -e "  \xE2\x9C\x93 .config should exist in /home/topher"
+      echo -en "\033[0m"
+      u_exit=1
+    else
+      c_exit=1
+      echo -en "\033[0;31m"
+      echo -e "  \xE2\x9C\x97 .config should exist in /home/topher"
+      echo -en "\033[0m"
+      u_out=$(su - topher -c 'mkdir /home/topher/.config')
+      u_exit=$?
+    fi
+    r_exit=$?
+    # echo "$r_exit$c_exit$u_exit"
+    # set any non zero value as 1 for read 
+    if [ $r_exit -ne 0 ]; then r_exit=1; fi
+    case "$r_exit$c_exit$u_exit" in
+    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
+    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
+    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
+    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
+    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
+    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
+    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
+    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
+    esac
+
+    if (test -f /home/topher/.config/user-dirs.conf > /dev/null)
+    then
+      c_exit=0
+      echo -en "\033[0;32m"
+      echo -e "  \xE2\x9C\x93 user-dirs.conf should exist in .config"
+      echo -en "\033[0m"
+      u_exit=1
+    else
+      c_exit=1
+      echo -en "\033[0;31m"
+      echo -e "  \xE2\x9C\x97 user-dirs.conf should exist in .config"
+      echo -en "\033[0m"
+      u_out=$(su - topher -c 'echo -e "enabled=false
+migrateold=false" > ~/.config/user-dirs.conf')
+      u_exit=$?
+    fi
+    r_exit=$?
+    # echo "$r_exit$c_exit$u_exit"
+    # set any non zero value as 1 for read 
+    if [ $r_exit -ne 0 ]; then r_exit=1; fi
+    case "$r_exit$c_exit$u_exit" in
+    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
+    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
+    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
+    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
+    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
+    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
+    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
+    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
+    esac
+
+    if (pacman -Q base-devel > /dev/null)
+    then
+      c_exit=0
+      echo -en "\033[0;32m"
+      echo -e "  \xE2\x9C\x93 base-devel should be installed"
+      echo -en "\033[0m"
+      u_exit=1
+    else
+      c_exit=1
+      echo -en "\033[0;31m"
+      echo -e "  \xE2\x9C\x97 base-devel should be installed"
+      echo -en "\033[0m"
+      u_out=$(sudo pacman -S base-devel --noconfirm)
+      u_exit=$?
+    fi
+    r_exit=$?
+    # echo "$r_exit$c_exit$u_exit"
+    # set any non zero value as 1 for read 
+    if [ $r_exit -ne 0 ]; then r_exit=1; fi
+    case "$r_exit$c_exit$u_exit" in
+    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
+    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
+    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
+    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
+    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
+    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
+    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
+    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
+    esac
+
+    if (pacman -Q lib32-nvidia-utils > /dev/null)
+    then
+      c_exit=0
+      echo -en "\033[0;32m"
+      echo -e "  \xE2\x9C\x93 32 bit Nvidia drivers should be installed"
+      echo -en "\033[0m"
+      u_exit=1
+    else
+      c_exit=1
+      echo -en "\033[0;31m"
+      echo -e "  \xE2\x9C\x97 32 bit Nvidia drivers should be installed"
+      echo -en "\033[0m"
+      u_out=$(sudo pacman -S lib32-nvidia-utils --noconfirm)
+      u_exit=$?
+    fi
+    r_exit=$?
+    # echo "$r_exit$c_exit$u_exit"
+    # set any non zero value as 1 for read 
+    if [ $r_exit -ne 0 ]; then r_exit=1; fi
+    case "$r_exit$c_exit$u_exit" in
+    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
+    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
+    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
+    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
+    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
+    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
+    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
+    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
+    esac
+
+    if (grep -qw "topherDesktop" /etc/hostname > /dev/null)
+    then
+      c_exit=0
+      echo -en "\033[0;32m"
+      echo -e "  \xE2\x9C\x93 Hostname should be set to topherDesktop"
+      echo -en "\033[0m"
+      u_exit=1
+    else
+      c_exit=1
+      echo -en "\033[0;31m"
+      echo -e "  \xE2\x9C\x97 Hostname should be set to topherDesktop"
+      echo -en "\033[0m"
+      u_out=$(echo "topherDesktop" | sudo tee /etc/hostname)
+      u_exit=$?
+    fi
+    r_exit=$?
+    # echo "$r_exit$c_exit$u_exit"
+    # set any non zero value as 1 for read 
+    if [ $r_exit -ne 0 ]; then r_exit=1; fi
+    case "$r_exit$c_exit$u_exit" in
+    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
+    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
+    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
+    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
+    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
+    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
+    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
+    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
+    esac
+
+    if (sudo systemctl is-enabled dhcpcd@$(ip -o link show | grep -E 'eth|enp|eno|ens' | head -n 1 | awk -F': ' '{print $2}').service > /dev/null)
+    then
+      c_exit=0
+      echo -en "\033[0;32m"
+      echo -e "  \xE2\x9C\x93 dhcpcd@ETHERNET.service should be enabled"
+      echo -en "\033[0m"
+      u_exit=1
+    else
+      c_exit=1
+      echo -en "\033[0;31m"
+      echo -e "  \xE2\x9C\x97 dhcpcd@ETHERNET.service should be enabled"
+      echo -en "\033[0m"
+      u_out=$(sudo systemctl enable dhcpcd@$(ip -o link show | grep -E 'eth|enp|eno|ens' | head -n 1 | awk -F': ' '{print $2}').service)
+      u_exit=$?
+    fi
+    r_exit=$?
+    # echo "$r_exit$c_exit$u_exit"
+    # set any non zero value as 1 for read 
+    if [ $r_exit -ne 0 ]; then r_exit=1; fi
+    case "$r_exit$c_exit$u_exit" in
+    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
+    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
+    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
+    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
+    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
+    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
+    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
+    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
+    esac
+
+    if (test -f /tmp/yay/PKGBUILD > /dev/null)
+    then
+      c_exit=0
+      echo -en "\033[0;32m"
+      echo -e "  \xE2\x9C\x93 Yay repo should be cloned to /tmp/yay"
+      echo -en "\033[0m"
+      u_exit=1
+    else
+      c_exit=1
+      echo -en "\033[0;31m"
+      echo -e "  \xE2\x9C\x97 Yay repo should be cloned to /tmp/yay"
+      echo -en "\033[0m"
+      u_out=$(git clone https://aur.archlinux.org/yay.git /tmp/yay && chown -R topher:topher /tmp/yay)
+      u_exit=$?
+    fi
+    r_exit=$?
+    # echo "$r_exit$c_exit$u_exit"
+    # set any non zero value as 1 for read 
+    if [ $r_exit -ne 0 ]; then r_exit=1; fi
+    case "$r_exit$c_exit$u_exit" in
+    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
+    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
+    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
+    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
+    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
+    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
+    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
+    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
+    esac
+
+    if (test -d /home/topher/Desktop -a -d /home/topher/Desktop/Documents -a -d /home/topher/Desktop/Downloads -a -d /home/topher/Desktop/Screenshots > /dev/null)
+    then
+      c_exit=0
+      echo -en "\033[0;32m"
+      echo -e "  \xE2\x9C\x93 Desktop, Downloads, and Documents directories should exist"
+      echo -en "\033[0m"
+      u_exit=1
+    else
+      c_exit=1
+      echo -en "\033[0;31m"
+      echo -e "  \xE2\x9C\x97 Desktop, Downloads, and Documents directories should exist"
+      echo -en "\033[0m"
+      u_out=$(su - topher -c 'mkdir Desktop && mkdir Desktop/Documents && mkdir Desktop/Downloads && mkdir Desktop/Screenshots')
+      u_exit=$?
+    fi
+    r_exit=$?
+    # echo "$r_exit$c_exit$u_exit"
+    # set any non zero value as 1 for read 
+    if [ $r_exit -ne 0 ]; then r_exit=1; fi
+    case "$r_exit$c_exit$u_exit" in
+    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
+    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
+    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
+    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
+    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
+    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
+    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
+    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
+    esac
+
+    if (test -n "$(find /tmp/yay -name "yay-*-x86_64.pkg.tar.zst" -not -name "*debug*")" > /dev/null)
+    then
+      c_exit=0
+      echo -en "\033[0;32m"
+      echo -e "  \xE2\x9C\x93 Yay package should be built"
+      echo -en "\033[0m"
+      u_exit=1
+    else
+      c_exit=1
+      echo -en "\033[0;31m"
+      echo -e "  \xE2\x9C\x97 Yay package should be built"
+      echo -en "\033[0m"
+      u_out=$(su - topher -c "cd /tmp/yay && makepkg -s")
+      u_exit=$?
+    fi
+    r_exit=$?
+    # echo "$r_exit$c_exit$u_exit"
+    # set any non zero value as 1 for read 
+    if [ $r_exit -ne 0 ]; then r_exit=1; fi
+    case "$r_exit$c_exit$u_exit" in
+    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
+    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
+    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
+    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
+    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
+    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
+    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
+    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
+    esac
+
+    if (test -f /tmp/yay/PKGBUILD && grep "^depends\|^makedepends" /tmp/yay/PKGBUILD | sed -e "s/^depends=(//g" -e "s/^makedepends=(//g" -e "s/)$//g" | tr "'" " " | awk '{print $1}' | sed 's/>.*$//' | xargs pacman -Q > /dev/null)
+    then
+      c_exit=0
+      echo -en "\033[0;32m"
+      echo -e "  \xE2\x9C\x93 Yay dependencies should be installed"
+      echo -en "\033[0m"
+      u_exit=1
+    else
+      c_exit=1
+      echo -en "\033[0;31m"
+      echo -e "  \xE2\x9C\x97 Yay dependencies should be installed"
+      echo -en "\033[0m"
+      u_out=$(grep "^depends\|^makedepends" /tmp/yay/PKGBUILD | sed -e "s/^depends=(//g" -e "s/^makedepends=(//g" -e "s/)$//g" | tr "'" " " | awk '{print $1}' | sed 's/>.*$//' | xargs pacman -S --noconfirm)
+      u_exit=$?
+    fi
+    r_exit=$?
+    # echo "$r_exit$c_exit$u_exit"
+    # set any non zero value as 1 for read 
+    if [ $r_exit -ne 0 ]; then r_exit=1; fi
+    case "$r_exit$c_exit$u_exit" in
+    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
+    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
+    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
+    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
+    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
+    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
+    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
+    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
+    esac
+
+    if (test -f /tmp/spotify/PKGBUILD && grep "^depends\|^makedepends" /tmp/spotify/PKGBUILD | sed -e "s/^depends=(//g" -e "s/^makedepends=(//g" -e "s/)$//g" | tr "'" " " | tr -s ' ' '\n' | sed '/^$/d' | sed 's/>.*$//' | xargs pacman -Q > /dev/null)
+    then
+      c_exit=0
+      echo -en "\033[0;32m"
+      echo -e "  \xE2\x9C\x93 Spotify dependencies should be installed"
+      echo -en "\033[0m"
+      u_exit=1
+    else
+      c_exit=1
+      echo -en "\033[0;31m"
+      echo -e "  \xE2\x9C\x97 Spotify dependencies should be installed"
+      echo -en "\033[0m"
+      u_out=$(grep "^depends\|^makedepends" /tmp/spotify/PKGBUILD | sed -e "s/^depends=(//g" -e "s/^makedepends=(//g" -e "s/)$//g" | tr "'" " " | tr -s ' ' '\n' | sed '/^$/d' | sed 's/>.*$//' | xargs pacman -S --noconfirm)
+      u_exit=$?
+    fi
+    r_exit=$?
+    # echo "$r_exit$c_exit$u_exit"
+    # set any non zero value as 1 for read 
+    if [ $r_exit -ne 0 ]; then r_exit=1; fi
+    case "$r_exit$c_exit$u_exit" in
+    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
+    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
+    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
+    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
+    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
+    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
+    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
+    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
+    esac
+
+    if (locale --all-locales | grep -q "en_US.utf8" > /dev/null)
+    then
+      c_exit=0
+      echo -en "\033[0;32m"
+      echo -e "  \xE2\x9C\x93 en_US.UTF-8 locale should be generated"
+      echo -en "\033[0m"
+      u_exit=1
+    else
+      c_exit=1
+      echo -en "\033[0;31m"
+      echo -e "  \xE2\x9C\x97 en_US.UTF-8 locale should be generated"
+      echo -en "\033[0m"
+      u_out=$(sudo sed -i 's/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && sudo locale-gen)
+      u_exit=$?
+    fi
+    r_exit=$?
+    # echo "$r_exit$c_exit$u_exit"
+    # set any non zero value as 1 for read 
+    if [ $r_exit -ne 0 ]; then r_exit=1; fi
+    case "$r_exit$c_exit$u_exit" in
+    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
+    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
+    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
+    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
+    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
+    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
+    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
+    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
+    esac
+
+    if (test -n "$(find /tmp/spotify -name "spotify-*-x86_64.pkg.tar.zst" -not -name "*debug*")" > /dev/null)
+    then
+      c_exit=0
+      echo -en "\033[0;32m"
+      echo -e "  \xE2\x9C\x93 Spotify package should be built"
+      echo -en "\033[0m"
+      u_exit=1
+    else
+      c_exit=1
+      echo -en "\033[0;31m"
+      echo -e "  \xE2\x9C\x97 Spotify package should be built"
+      echo -en "\033[0m"
+      u_out=$(su - topher -c "cd /tmp/spotify && makepkg -s --skippgpcheck")
+      u_exit=$?
+    fi
+    r_exit=$?
+    # echo "$r_exit$c_exit$u_exit"
+    # set any non zero value as 1 for read 
+    if [ $r_exit -ne 0 ]; then r_exit=1; fi
+    case "$r_exit$c_exit$u_exit" in
+    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
+    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
+    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
+    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
+    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
+    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
+    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
+    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
+    esac
+
+    if (pacman -Q git > /dev/null)
+    then
+      c_exit=0
+      echo -en "\033[0;32m"
+      echo -e "  \xE2\x9C\x93 Git should be installed"
+      echo -en "\033[0m"
+      u_exit=1
+    else
+      c_exit=1
+      echo -en "\033[0;31m"
+      echo -e "  \xE2\x9C\x97 Git should be installed"
+      echo -en "\033[0m"
+      u_out=$(sudo pacman -S git --noconfirm)
+      u_exit=$?
+    fi
+    r_exit=$?
+    # echo "$r_exit$c_exit$u_exit"
+    # set any non zero value as 1 for read 
+    if [ $r_exit -ne 0 ]; then r_exit=1; fi
+    case "$r_exit$c_exit$u_exit" in
+    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
+    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
+    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
+    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
+    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
+    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
+    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
+    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
+    esac
+
     echo -e "cycle $cycle"
     echo -e "$converge"
     echo -e "$converged"
@@ -644,7 +795,7 @@ done
 end_time="$(date -u +%s)"
 
   echo -en "\033[1;33m"
-  echo -e "* The Spellcaster free tier includes up to 10 trigraphs. You are at 20 trigraphs and should sign up for an individual plan here https://spellcaster.sh/pricing.\n"
+  echo -e "* The Spellcaster free tier includes up to 10 trigraphs. You are at 25 trigraphs and should sign up for an individual plan here https://spellcaster.sh/pricing.\n"
   echo -en "\033[0m"
 
 if [ "$converge" = "$converged" ]

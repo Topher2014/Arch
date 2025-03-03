@@ -101,9 +101,39 @@
         "!": "grep \"^depends\\|^makedepends\" /tmp/spotify/PKGBUILD | sed -e \"s/^depends=(//g\" -e \"s/^makedepends=(//g\" -e \"s/)$//g\" | tr \"'\" \" \" | tr -s ' ' '\\n' | sed '/^$/d' | sed 's/>.*$//' | xargs pacman -S --noconfirm"
       },
       {
-        "#": "/home/topher/Desktop/Screenshots directory should exist",
-        "?": "test -d /home/topher/Desktop/Screenshots",
-        "!": "mkdir /home/topher/Desktop && mkdir /home/topher/Desktop/Screenshots"
+        "#": "user-dirs.dirs should exist in .config",
+        "?": "test -f /home/topher/.config/user-dirs.dirs",
+        "!": "su - topher -c 'curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.config/user-dirs.dirs >> /home/topher/.config/user-dirs.dirs'"
+      },
+      {
+        "#": "user-dirs.locale should exist in .config",
+        "?": "test -f /home/topher/.config/user-dirs.locale",
+        "!": "su - topher -c 'locale | grep LANG | cut -d= -f2 | tr -d \"\\\"\" > ~/.config/user-dirs.locale'"
+      },
+      {
+        "#": "user-dirs.conf should exist in .config",
+        "?": "test -f /home/topher/.config/user-dirs.conf",
+        "!": "su - topher -c 'echo -e \"enabled=false\nmigrateold=false\" > ~/.config/user-dirs.conf'"
+      },
+      {
+        "#": "Desktop, Downloads, and Documents directories should exist",
+        "?": "test -d /home/topher/Desktop -a -d /home/topher/Desktop/Documents -a -d /home/topher/Desktop/Downloads -a -d /home/topher/Desktop/Screenshots",
+        "!": "su - topher -c 'mkdir Desktop && mkdir Desktop/Documents && mkdir Desktop/Downloads && mkdir Desktop/Screenshots'"
+      },
+      {
+        "#": "xdg-user-dirs-update --force should be ran after .config files and dirctories exist",
+        "?": "test -f /home/topher/.config/user-dirs.conf -a -f /home/topher/.config/user-dirs.locale -a -f /home/topher/.config/user-dirs.dirs -a -d /home/topher/Desktop",
+        "!": "su - topher -c 'source ~/.config/user-dirs.dirs && mkdir -p \"$XDG_DESKTOP_DIR\" \"$XDG_DOCUMENTS_DIR\" \"$XDG_DOWNLOADS_DIR\"'"
+      },
+      {
+        "#": ".config should exist in /home/topher",
+        "?": "test -d /home/topher/.config",
+        "!": "su - topher -c 'mkdir /home/topher/.config'"
+      },
+      {
+        "#": "",
+        "?": "",
+        "!": ""
       }
     ]
   }
