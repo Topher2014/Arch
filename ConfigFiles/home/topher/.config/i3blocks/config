@@ -1,0 +1,8 @@
+
+# Global properties
+#separator=true
+#separator_block_width=15
+
+[time]
+command=date '+%H:%M:%S'
+interval=1

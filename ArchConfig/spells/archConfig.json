@@ -101,6 +101,21 @@
         "!": "grep \"^depends\\|^makedepends\" /tmp/spotify/PKGBUILD | sed -e \"s/^depends=(//g\" -e \"s/^makedepends=(//g\" -e \"s/)$//g\" | tr \"'\" \" \" | tr -s ' ' '\\n' | sed '/^$/d' | sed 's/>.*$//' | xargs pacman -S --noconfirm"
       },
       {
+        "#": "VSCode PKGBUILD should be downloaded",
+        "?": "test -f /tmp/visual-studio-code-bin/PKGBUILD",
+        "!": "su - topher -c \"cd /tmp && yay -G visual-studio-code-bin\""
+      },
+      {
+        "#": "VSCode package should be built",
+        "?": "test -n \"$(find /tmp/visual-studio-code-bin -name \"visual-studio-code-bin-*-x86_64.pkg.tar.zst\" -not -name \"*debug*\")\"",
+        "!": "su - topher -c \"cd /tmp/visual-studio-code-bin && makepkg -s --skippgpcheck\""
+      },
+      {
+        "#": "VSCode dependencies should be installed",
+        "?": "test -f /tmp/visual-studio-code-bin/PKGBUILD && grep \"^depends\\|^makedepends\" /tmp/visual-studio-code-bin/PKGBUILD | sed -e \"s/^depends=(//g\" -e \"s/^makedepends=(//g\" -e \"s/)$//g\" | tr \"'\" \" \" | tr -s ' ' '\\n' | sed '/^$/d' | sed 's/>.*$//' | xargs pacman -Q",
+        "!": "grep \"^depends\\|^makedepends\" /tmp/visual-studio-code-bin/PKGBUILD | sed -e \"s/^depends=(//g\" -e \"s/^makedepends=(//g\" -e \"s/)$//g\" | tr \"'\" \" \" | tr -s ' ' '\\n' | sed '/^$/d' | sed 's/>.*$//' | xargs pacman -S --noconfirm"
+      },
+      {
         "#": "user-dirs.dirs should exist in .config",
         "?": "test -f /home/topher/.config/user-dirs.dirs",
         "!": "su - topher -c 'curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.config/user-dirs.dirs >> /home/topher/.config/user-dirs.dirs'"
@@ -131,9 +146,124 @@
         "!": "su - topher -c 'mkdir /home/topher/.config'"
       },
       {
-        "#": "",
-        "?": "",
-        "!": ""
-      }
+        "#": ".Xresources should exist in /home/topher",
+        "?": "test -f /home/topher/.Xresources",
+        "!": "curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.Xresources >> /home/topher/.Xresources"
+      },
+      {
+        "#": ".bash_profile should exist in /home/topher",
+        "?": "test -f /home/topher/.bash_profile",
+        "!": "curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.bash_profile >> /home/topher/.bash_profile"
+      },
+      {
+        "#": ".bashrc should exist in /home/topher",
+        "?": "test -f /home/topher/.bashrc",
+        "!": "curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.bashrc >> /home/topher/.bashrc"
+      },
+      {
+        "#": ".gitconfig should exist in /home/topher",
+        "?": "test -f /home/topher/.gitconfig",
+        "!": "curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.gitconfig >> /home/topher/.gitconfig"
+      },
+      {
+        "#": ".xinitrc should exist in /home/topher",
+        "?": "test -f /home/topher/.xinitrc",
+        "!": "curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.xinitrc >> /home/topher/.xinitrc"
+      },
+      {
+        "#": "i3 config should exist in /home/topher/.config/i3",
+        "?": "test -f /home/topher/.config/i3/config",
+        "!": "su - topher -c 'mkdir /home/topher/.config/i3 && curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.config/i3/config >> /home/topher/.config/i3/config'"
+      },
+      {
+        "#": "i3status config should exist in /home/topher/.config/i3status",
+        "?": "test -f /home/topher/.config/i3status/config",
+        "!": "su - topher -c 'mkdir /home/topher/.config/i3status && curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.config/i3status/config >> /home/topher/.config/i3status/config'"
+      },
+      {
+        "#": "urxvt font-resize plugin should exist",
+        "?": "test -f /home/topher/.urxvt/ext/resize-font",
+        "!": "su - topher -c 'mkdir -p /home/topher/.urxvt/ext && curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.urxvt/ext/resize-font >> /home/topher/.urxvt/ext/resize-font'"
+      },
+      {
+        "#": "noto-fonts should be installed",
+        "?": "pacman -Q noto-fonts",
+        "!": "pacman -S noto-fonts --noconfirm"
+      },
+      {
+        "#": "cifs-utils should be installed",
+        "?": "pacman -Q cifs-utils",
+        "!": "pacman -S cifs-utils --noconfirm"
+      },
+      {
+        "#": "mpv should be installed",
+        "?": "pacman -Q mpv",
+        "!": "pacman -S mpv --noconfirm"
+      },
+      {
+        "#": "less should be installed",
+        "?": "pacman -Q less",
+        "!": "pacman -S less --noconfirm"
+      },
+      {
+        "#": "openssh should be installed",
+        "?": "pacman -Q openssh",
+        "!": "pacman -S openssh --noconfirm"
+      },
+      {
+        "#": "xorg-server should be installed",
+        "?": "pacman -Q xorg-server",
+        "!": "pacman -S xorg-server --noconfirm"
+      },
+      {
+        "#": "i3 should be installed",
+        "?": "pacman -Q i3-wm",
+        "!": "pacman -S i3 --noconfirm"
+      },
+      {
+        "#": "rxvt-unicode should be installed",
+        "?": "pacman -Q rxvt-unicode",
+        "!": "pacman -S rxvt-unicode --noconfirm"
+      },
+      {
+        "#": "firefox should be installed",
+        "?": "pacman -Q firefox",
+        "!": "pacman -S firefox --noconfirm"
+      },
+      {
+        "#": "vim should be installed",
+        "?": "pacman -Q vim",
+        "!": "pacman -S vim --noconfirm"
+      },
+      {
+        "#": "xorg-xinit should be installed",
+        "?": "pacman -Q xorg-xinit",
+        "!": "pacman -S xorg-xinit --noconfirm"
+      },
+      {
+        "#": "dmenu should be installed",
+        "?": "pacman -Q dmenu",
+        "!": "pacman -S dmenu --noconfirm"
+      },
+      {
+        "#": "xorg-xrandr should be installed",
+        "?": "pacman -Q xorg-xrandr",
+        "!": "pacman -S xorg-xrandr --noconfirm"
+      },
+      {
+        "#": "pulseaudio should be installed",
+        "?": "pacman -Q pulseaudio",
+        "!": "pacman -S pulseaudio --noconfirm"
+      },
+      {
+        "#": "discord should be installed",
+        "?": "pacman -Q discord",
+        "!": "pacman -S discord --noconfirm"
+      },
+      {
+        "#": "docker should be installed",
+        "?": "pacman -Q docker",
+        "!": "pacman -S docker --noconfirm"
+      } 
     ]
   }

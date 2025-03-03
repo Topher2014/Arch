@@ -8,7 +8,7 @@
       {
         "#": "The VM ${VM:-arch-vm} should exist",
         "?": "virsh list --state-running | grep ${VM:-arch-vm}",
-        "!": "sudo virt-install --name ${VM:-arch-vm} --os-variant archlinux --disk path=/var/lib/libvirt/images/${VM:-arch-vm}.qcow2 --cloud-init user-data=./arch-vm_cloud-init --import --noautoconsole"
+        "!": "sudo virt-install --name ${VM:-arch-vm} --os-variant archlinux --disk path=/var/lib/libvirt/images/${VM:-arch-vm}.qcow2 --cloud-init user-data=./arch-vm_cloud-init --memory ${VM_MEMORY:-4096} --import --noautoconsole"
       },
       {
         "#": "/var/lib/libvirt/images/${VM:-arch-vm}.qcow2 should exist",
