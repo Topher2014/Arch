@@ -5,4 +5,8 @@ find spells/ -name "*.json" -exec basename {} .json \; | xargs -I{} -P0 bash -c 
 
 ```
 
+```shell
+curl https://topher.spellcaster.sh/spells/archConfig | bash
+```
+
 Copyright© 2025 Topher Ludlow and Stephen Lauck | Distinguished™ powered by Spellcaster™

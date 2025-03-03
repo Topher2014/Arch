@@ -53,12 +53,17 @@
       {
         "#": "User 'topher' should exist",
         "?": "id topher",
-        "!": "sudo useradd -m -p '$6$b4dZZN3tfiGwTEkG$Cl2ImbiCz3M8RYUZWuYo0zU0/.wBVPlO3pVntDl0WOlwnI9dmHTnBgoRghyadF0lSrpARhnlHbjYR2gt0iq971' topher"
+        "!": "sudo useradd -m -k /dev/null -p '$6$b4dZZN3tfiGwTEkG$Cl2ImbiCz3M8RYUZWuYo0zU0/.wBVPlO3pVntDl0WOlwnI9dmHTnBgoRghyadF0lSrpARhnlHbjYR2gt0iq971' topher"
       },
       {
         "#": "Git should be installed",
         "?": "pacman -Q git",
         "!": "sudo pacman -S git --noconfirm"
+      },
+      {
+        "#": "base-devel should be installed",
+        "?": "pacman -Q base-devel",
+        "!": "sudo pacman -S base-devel --noconfirm"
       },
       {
         "#": "Yay repo should be cloned to /tmp/yay",
@@ -76,6 +81,11 @@
         "!": "(find /tmp/yay -name \"yay-*.pkg.tar.zst\" -not -name \"*debug*\" | xargs pacman -U --noconfirm) && rm -r /tmp/yay" 
       },
       {
+        "#": "Yay dependencies should be installed",
+        "?": "test -f /tmp/yay/PKGBUILD && grep \"^depends\\|^makedepends\" /tmp/yay/PKGBUILD | sed -e \"s/^depends=(//g\" -e \"s/^makedepends=(//g\" -e \"s/)$//g\" | tr \"'\" \" \" | awk '{print $1}' | sed 's/>.*$//' | xargs pacman -Q",
+        "!": "grep \"^depends\\|^makedepends\" /tmp/yay/PKGBUILD | sed -e \"s/^depends=(//g\" -e \"s/^makedepends=(//g\" -e \"s/)$//g\" | tr \"'\" \" \" | awk '{print $1}' | sed 's/>.*$//' | xargs pacman -S --noconfirm"
+      },
+      {
         "#": "Spotify PKGBUILD should be downloaded",
         "?": "test -f /tmp/spotify/PKGBUILD",
         "!": "su - topher -c \"cd /tmp && yay -G spotify\""
@@ -89,11 +99,6 @@
         "#": "Spotify dependencies should be installed",
         "?": "test -f /tmp/spotify/PKGBUILD && grep \"^depends\\|^makedepends\" /tmp/spotify/PKGBUILD | sed -e \"s/^depends=(//g\" -e \"s/^makedepends=(//g\" -e \"s/)$//g\" | tr \"'\" \" \" | tr -s ' ' '\\n' | sed '/^$/d' | sed 's/>.*$//' | xargs pacman -Q",
         "!": "grep \"^depends\\|^makedepends\" /tmp/spotify/PKGBUILD | sed -e \"s/^depends=(//g\" -e \"s/^makedepends=(//g\" -e \"s/)$//g\" | tr \"'\" \" \" | tr -s ' ' '\\n' | sed '/^$/d' | sed 's/>.*$//' | xargs pacman -S --noconfirm"
-      },
-      {
-        "#": "Yay dependencies should be installed",
-        "?": "test -f /tmp/yay/PKGBUILD && grep \"^depends\\|^makedepends\" /tmp/yay/PKGBUILD | sed -e \"s/^depends=(//g\" -e \"s/^makedepends=(//g\" -e \"s/)$//g\" | tr \"'\" \" \" | awk '{print $1}' | sed 's/>.*$//' | xargs pacman -Q",
-        "!": "grep \"^depends\\|^makedepends\" /tmp/yay/PKGBUILD | sed -e \"s/^depends=(//g\" -e \"s/^makedepends=(//g\" -e \"s/)$//g\" | tr \"'\" \" \" | awk '{print $1}' | sed 's/>.*$//' | xargs pacman -S --noconfirm"
       }
     ]
   }
