@@ -76,9 +76,9 @@
         "!": "su - topher -c \"cd /tmp/yay && makepkg -s\""
       },
       {
-        "#": "Yay should be installed and removed",
+        "#": "Yay should be installed",
         "?": "pacman -Q yay",
-        "!": "(find /tmp/yay -name \"yay-*.pkg.tar.zst\" -not -name \"*debug*\" | xargs pacman -U --noconfirm) && rm -r /tmp/yay" 
+        "!": "find /tmp/yay -name \"yay-*.pkg.tar.zst\" -not -name \"*debug*\" | xargs pacman -U --noconfirm" 
       },
       {
         "#": "Yay dependencies should be installed",
@@ -99,6 +99,11 @@
         "#": "Spotify dependencies should be installed",
         "?": "test -f /tmp/spotify/PKGBUILD && grep \"^depends\\|^makedepends\" /tmp/spotify/PKGBUILD | sed -e \"s/^depends=(//g\" -e \"s/^makedepends=(//g\" -e \"s/)$//g\" | tr \"'\" \" \" | tr -s ' ' '\\n' | sed '/^$/d' | sed 's/>.*$//' | xargs pacman -Q",
         "!": "grep \"^depends\\|^makedepends\" /tmp/spotify/PKGBUILD | sed -e \"s/^depends=(//g\" -e \"s/^makedepends=(//g\" -e \"s/)$//g\" | tr \"'\" \" \" | tr -s ' ' '\\n' | sed '/^$/d' | sed 's/>.*$//' | xargs pacman -S --noconfirm"
+      },
+      {
+        "#": "/home/topher/Desktop/Screenshots directory should exist",
+        "?": "test -d /home/topher/Desktop/Screenshots",
+        "!": "mkdir /home/topher/Desktop && mkdir /home/topher/Desktop/Screenshots"
       }
     ]
   }
