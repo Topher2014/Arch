@@ -176,9 +176,9 @@
         "!": "su - topher -c 'mkdir /home/topher/.config/i3 && curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.config/i3/config >> /home/topher/.config/i3/config'"
       },
       {
-        "#": "i3status config should exist in /home/topher/.config/i3status",
-        "?": "test -f /home/topher/.config/i3status/config",
-        "!": "su - topher -c 'mkdir /home/topher/.config/i3status && curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.config/i3status/config >> /home/topher/.config/i3status/config'"
+        "#": "i3blocks config should exist in /home/topher/.config/i3status",
+        "?": "test -f /home/topher/.config/i3blocks/config",
+        "!": "su - topher -c 'mkdir /home/topher/.config/i3blocks && curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.config/i3blocks/config >> /home/topher/.config/i3blocks/config'"
       },
       {
         "#": "urxvt font-resize plugin should exist",
