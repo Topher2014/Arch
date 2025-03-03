@@ -1,0 +1,79 @@
+{
+    "name": "archVM",
+    "description": "A spell to switch context from local to a fresh Arch compute instance",
+    "identity": "topherludlow@protonmail.com",
+    "$schema": "https://spellcaster.sh/schema.json",
+    "license": "accept",
+    "trigraphs": [
+      {
+        "#": "The VM ${VM:-arch-vm} should exist",
+        "?": "virsh list --state-running | grep ${VM:-arch-vm}",
+        "!": "sudo virt-install --name ${VM:-arch-vm} --os-variant archlinux --disk path=/var/lib/libvirt/images/${VM:-arch-vm}.qcow2 --cloud-init user-data=./arch-vm_cloud-init --import --noautoconsole"
+      },
+      {
+        "#": "/var/lib/libvirt/images/${VM:-arch-vm}.qcow2 should exist",
+        "?": "test -s /var/lib/libvirt/images/${VM:-arch-vm}.qcow2",
+        "!": "sudo qemu-img create -F qcow2 -b /var/lib/libvirt/images/Arch-Linux-x86_64-cloudimg.qcow2 -f qcow2 /var/lib/libvirt/images/${VM:-arch-vm}.qcow2 ${VM_STORAGE:-100G}"
+      },
+      {
+        "#": "Backing image /var/lib/libvirt/images/Arch-Linux-x86_64-cloudimg.qcow2 should exist",
+        "?": "test -s /var/lib/libvirt/images/Arch-Linux-x86_64-cloudimg.qcow2",
+        "!": "sudo wget https://geo.mirror.pkgbuild.com/images/latest/Arch-Linux-x86_64-cloudimg.qcow2 -O /var/lib/libvirt/images/Arch-Linux-x86_64-cloudimg.qcow2"
+      },
+      {
+        "#": "qemu-base should be installed",
+        "?": "pacman -Q qemu-base",
+        "!": "sudo pacman -S qemu-base --noconfirm"
+      },
+      {
+        "#": "Virsh default network should be active",
+        "?": "virsh net-info default | grep \"Active:.*yes\"",
+        "!": "virsh net-start default"
+      },
+      {
+        "#": "Virsh default network autostart should be enabled",
+        "?": "virsh net-info default | grep \"Autostart:.*yes\"",
+        "!": "virsh net-autostart default"
+      },
+      {
+        "#": "libvirt should be installed",
+        "?": "pacman -Q libvirt",
+        "!": "sudo pacman -S libvirt --noconfirm"
+      },
+      {
+        "#": "virt-manager should be installed",
+        "?": "pacman -Q virt-manager",
+        "!": "sudo pacman -S virt-manager --noconfirm"
+      },
+      {
+        "#": "libvirtd should be enabled",
+        "?": "systemctl is-enabled libvirtd",
+        "!": "sudo systemctl enable libvirtd"
+      },
+      {
+        "#": "libvirtd should be running",
+        "?": "systemctl is-active libvirtd",
+        "!": "sudo systemctl start libvirtd"
+      },
+      {
+        "#": "$USER should belong to libvirt group",
+        "?": "groups $USER | grep libvirt",
+        "!": "sudo usermod -aG libvirt $USER"
+      },
+      {
+        "#": "wget should be installed",
+        "?": "pacman -Q wget",
+        "!": "sudo pacman -S wget --noconfirm"
+      },
+      {
+        "#": ".config/libvirt/libvirt.conf should exist",
+        "?": "grep 'uri_default = \"qemu:///system\"' $HOME/.config/libvirt/libvirt.conf",
+        "!": "echo 'uri_default = \"qemu:///system\"' > $HOME/.config/libvirt/libvirt.conf"
+      },
+      {
+        "#": "$USER should be in the /var/run/libvirt/libvirt-sock user ACL",
+        "?": "getfacl /var/run/libvirt/libvirt-sock | grep $USER",
+        "!": "sudo setfacl -m user:$USER:rw /var/run/libvirt/libvirt-sock"
+      }
+    ]
+  }
