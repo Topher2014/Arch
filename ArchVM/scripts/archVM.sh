@@ -4,7 +4,7 @@
 # © 2023, Distinguished LLC. All rights reserved.
 
 # Name: archVM
-# ID: ee3856a5-b60c-4d10-8a4e-c87cf8662531
+# ID: d104664f-2810-449f-b990-2d6d03f0977e
 # Description: A spell to switch context from local to a fresh Arch compute instance
 # Identity: topherludlow@protonmail.com
 
@@ -21,7 +21,7 @@ __)|_)(/_||(_(_|_> |_(/_|
 EOF
 
 echo -e "Name: archVM"
-echo -e "ID: ee3856a5-b60c-4d10-8a4e-c87cf8662531"
+echo -e "ID: d104664f-2810-449f-b990-2d6d03f0977e"
 echo -e "Description: A spell to switch context from local to a fresh Arch compute instance"
 echo -e "Identity: topherludlow@protonmail.com"
 echo -e "Converging 14 resources..."
@@ -33,49 +33,19 @@ echo -en "\033[0m"
 while [ "$converge" != "$converged" ] && [ $cycle -le 14 ]
   do
     converge=''
-    if (test -s /var/lib/libvirt/images/${VM:-arch-vm}.qcow2 > /dev/null)
+    if (pacman -Q qemu-base > /dev/null)
     then
       c_exit=0
       echo -en "\033[0;32m"
-      echo -e "  \xE2\x9C\x93 /var/lib/libvirt/images/${VM:-arch-vm}.qcow2 should exist"
+      echo -e "  \xE2\x9C\x93 qemu-base should be installed"
       echo -en "\033[0m"
       u_exit=1
     else
       c_exit=1
       echo -en "\033[0;31m"
-      echo -e "  \xE2\x9C\x97 /var/lib/libvirt/images/${VM:-arch-vm}.qcow2 should exist"
+      echo -e "  \xE2\x9C\x97 qemu-base should be installed"
       echo -en "\033[0m"
-      u_out=$(sudo qemu-img create -F qcow2 -b /var/lib/libvirt/images/Arch-Linux-x86_64-cloudimg.qcow2 -f qcow2 /var/lib/libvirt/images/${VM:-arch-vm}.qcow2 ${VM_STORAGE:-100G})
-      u_exit=$?
-    fi
-    r_exit=$?
-    # echo "$r_exit$c_exit$u_exit"
-    # set any non zero value as 1 for read 
-    if [ $r_exit -ne 0 ]; then r_exit=1; fi
-    case "$r_exit$c_exit$u_exit" in
-    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
-    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
-    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
-    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
-    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
-    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
-    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
-    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
-    esac
-
-    if (pacman -Q libvirt > /dev/null)
-    then
-      c_exit=0
-      echo -en "\033[0;32m"
-      echo -e "  \xE2\x9C\x93 libvirt should be installed"
-      echo -en "\033[0m"
-      u_exit=1
-    else
-      c_exit=1
-      echo -en "\033[0;31m"
-      echo -e "  \xE2\x9C\x97 libvirt should be installed"
-      echo -en "\033[0m"
-      u_out=$(sudo pacman -S libvirt --noconfirm)
+      u_out=$(sudo pacman -S qemu-base --noconfirm)
       u_exit=$?
     fi
     r_exit=$?
@@ -123,79 +93,19 @@ while [ "$converge" != "$converged" ] && [ $cycle -le 14 ]
     111) converge="$converge$(printf "\xE2\x98\xB7") ";;
     esac
 
-    if (virsh net-info default | grep "Active:.*yes" > /dev/null)
+    if (groups $USER | grep libvirt > /dev/null)
     then
       c_exit=0
       echo -en "\033[0;32m"
-      echo -e "  \xE2\x9C\x93 Virsh default network should be active"
+      echo -e "  \xE2\x9C\x93 $USER should belong to libvirt group"
       echo -en "\033[0m"
       u_exit=1
     else
       c_exit=1
       echo -en "\033[0;31m"
-      echo -e "  \xE2\x9C\x97 Virsh default network should be active"
+      echo -e "  \xE2\x9C\x97 $USER should belong to libvirt group"
       echo -en "\033[0m"
-      u_out=$(virsh net-start default)
-      u_exit=$?
-    fi
-    r_exit=$?
-    # echo "$r_exit$c_exit$u_exit"
-    # set any non zero value as 1 for read 
-    if [ $r_exit -ne 0 ]; then r_exit=1; fi
-    case "$r_exit$c_exit$u_exit" in
-    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
-    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
-    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
-    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
-    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
-    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
-    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
-    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
-    esac
-
-    if (pacman -Q qemu-base > /dev/null)
-    then
-      c_exit=0
-      echo -en "\033[0;32m"
-      echo -e "  \xE2\x9C\x93 qemu-base should be installed"
-      echo -en "\033[0m"
-      u_exit=1
-    else
-      c_exit=1
-      echo -en "\033[0;31m"
-      echo -e "  \xE2\x9C\x97 qemu-base should be installed"
-      echo -en "\033[0m"
-      u_out=$(sudo pacman -S qemu-base --noconfirm)
-      u_exit=$?
-    fi
-    r_exit=$?
-    # echo "$r_exit$c_exit$u_exit"
-    # set any non zero value as 1 for read 
-    if [ $r_exit -ne 0 ]; then r_exit=1; fi
-    case "$r_exit$c_exit$u_exit" in
-    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
-    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
-    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
-    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
-    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
-    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
-    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
-    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
-    esac
-
-    if (test -s /var/lib/libvirt/images/Arch-Linux-x86_64-cloudimg.qcow2 > /dev/null)
-    then
-      c_exit=0
-      echo -en "\033[0;32m"
-      echo -e "  \xE2\x9C\x93 Backing image /var/lib/libvirt/images/Arch-Linux-x86_64-cloudimg.qcow2 should exist"
-      echo -en "\033[0m"
-      u_exit=1
-    else
-      c_exit=1
-      echo -en "\033[0;31m"
-      echo -e "  \xE2\x9C\x97 Backing image /var/lib/libvirt/images/Arch-Linux-x86_64-cloudimg.qcow2 should exist"
-      echo -en "\033[0m"
-      u_out=$(sudo wget https://geo.mirror.pkgbuild.com/images/latest/Arch-Linux-x86_64-cloudimg.qcow2 -O /var/lib/libvirt/images/Arch-Linux-x86_64-cloudimg.qcow2)
+      u_out=$(sudo usermod -aG libvirt $USER)
       u_exit=$?
     fi
     r_exit=$?
@@ -273,66 +183,6 @@ while [ "$converge" != "$converged" ] && [ $cycle -le 14 ]
     111) converge="$converge$(printf "\xE2\x98\xB7") ";;
     esac
 
-    if (groups $USER | grep libvirt > /dev/null)
-    then
-      c_exit=0
-      echo -en "\033[0;32m"
-      echo -e "  \xE2\x9C\x93 $USER should belong to libvirt group"
-      echo -en "\033[0m"
-      u_exit=1
-    else
-      c_exit=1
-      echo -en "\033[0;31m"
-      echo -e "  \xE2\x9C\x97 $USER should belong to libvirt group"
-      echo -en "\033[0m"
-      u_out=$(sudo usermod -aG libvirt $USER)
-      u_exit=$?
-    fi
-    r_exit=$?
-    # echo "$r_exit$c_exit$u_exit"
-    # set any non zero value as 1 for read 
-    if [ $r_exit -ne 0 ]; then r_exit=1; fi
-    case "$r_exit$c_exit$u_exit" in
-    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
-    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
-    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
-    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
-    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
-    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
-    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
-    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
-    esac
-
-    if (pacman -Q wget > /dev/null)
-    then
-      c_exit=0
-      echo -en "\033[0;32m"
-      echo -e "  \xE2\x9C\x93 wget should be installed"
-      echo -en "\033[0m"
-      u_exit=1
-    else
-      c_exit=1
-      echo -en "\033[0;31m"
-      echo -e "  \xE2\x9C\x97 wget should be installed"
-      echo -en "\033[0m"
-      u_out=$(sudo pacman -S wget --noconfirm)
-      u_exit=$?
-    fi
-    r_exit=$?
-    # echo "$r_exit$c_exit$u_exit"
-    # set any non zero value as 1 for read 
-    if [ $r_exit -ne 0 ]; then r_exit=1; fi
-    case "$r_exit$c_exit$u_exit" in
-    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
-    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
-    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
-    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
-    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
-    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
-    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
-    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
-    esac
-
     if (getfacl /var/run/libvirt/libvirt-sock | grep $USER > /dev/null)
     then
       c_exit=0
@@ -346,6 +196,66 @@ while [ "$converge" != "$converged" ] && [ $cycle -le 14 ]
       echo -e "  \xE2\x9C\x97 $USER should be in the /var/run/libvirt/libvirt-sock user ACL"
       echo -en "\033[0m"
       u_out=$(sudo setfacl -m user:$USER:rw /var/run/libvirt/libvirt-sock)
+      u_exit=$?
+    fi
+    r_exit=$?
+    # echo "$r_exit$c_exit$u_exit"
+    # set any non zero value as 1 for read 
+    if [ $r_exit -ne 0 ]; then r_exit=1; fi
+    case "$r_exit$c_exit$u_exit" in
+    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
+    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
+    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
+    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
+    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
+    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
+    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
+    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
+    esac
+
+    if (test -s /var/lib/libvirt/images/Arch-Linux-x86_64-cloudimg.qcow2 > /dev/null)
+    then
+      c_exit=0
+      echo -en "\033[0;32m"
+      echo -e "  \xE2\x9C\x93 Backing image /var/lib/libvirt/images/Arch-Linux-x86_64-cloudimg.qcow2 should exist"
+      echo -en "\033[0m"
+      u_exit=1
+    else
+      c_exit=1
+      echo -en "\033[0;31m"
+      echo -e "  \xE2\x9C\x97 Backing image /var/lib/libvirt/images/Arch-Linux-x86_64-cloudimg.qcow2 should exist"
+      echo -en "\033[0m"
+      u_out=$(sudo wget https://geo.mirror.pkgbuild.com/images/latest/Arch-Linux-x86_64-cloudimg.qcow2 -O /var/lib/libvirt/images/Arch-Linux-x86_64-cloudimg.qcow2)
+      u_exit=$?
+    fi
+    r_exit=$?
+    # echo "$r_exit$c_exit$u_exit"
+    # set any non zero value as 1 for read 
+    if [ $r_exit -ne 0 ]; then r_exit=1; fi
+    case "$r_exit$c_exit$u_exit" in
+    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
+    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
+    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
+    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
+    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
+    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
+    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
+    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
+    esac
+
+    if (virsh net-info default | grep "Autostart:.*yes" > /dev/null)
+    then
+      c_exit=0
+      echo -en "\033[0;32m"
+      echo -e "  \xE2\x9C\x93 Virsh default network autostart should be enabled"
+      echo -en "\033[0m"
+      u_exit=1
+    else
+      c_exit=1
+      echo -en "\033[0;31m"
+      echo -e "  \xE2\x9C\x97 Virsh default network autostart should be enabled"
+      echo -en "\033[0m"
+      u_out=$(virsh net-autostart default)
       u_exit=$?
     fi
     r_exit=$?
@@ -393,6 +303,36 @@ while [ "$converge" != "$converged" ] && [ $cycle -le 14 ]
     111) converge="$converge$(printf "\xE2\x98\xB7") ";;
     esac
 
+    if (test -s /var/lib/libvirt/images/${VM:-arch-vm}.qcow2 > /dev/null)
+    then
+      c_exit=0
+      echo -en "\033[0;32m"
+      echo -e "  \xE2\x9C\x93 /var/lib/libvirt/images/${VM:-arch-vm}.qcow2 should exist"
+      echo -en "\033[0m"
+      u_exit=1
+    else
+      c_exit=1
+      echo -en "\033[0;31m"
+      echo -e "  \xE2\x9C\x97 /var/lib/libvirt/images/${VM:-arch-vm}.qcow2 should exist"
+      echo -en "\033[0m"
+      u_out=$(sudo qemu-img create -F qcow2 -b /var/lib/libvirt/images/Arch-Linux-x86_64-cloudimg.qcow2 -f qcow2 /var/lib/libvirt/images/${VM:-arch-vm}.qcow2 ${VM_STORAGE:-100G})
+      u_exit=$?
+    fi
+    r_exit=$?
+    # echo "$r_exit$c_exit$u_exit"
+    # set any non zero value as 1 for read 
+    if [ $r_exit -ne 0 ]; then r_exit=1; fi
+    case "$r_exit$c_exit$u_exit" in
+    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
+    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
+    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
+    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
+    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
+    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
+    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
+    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
+    esac
+
     if (virsh list --state-running | grep ${VM:-arch-vm} > /dev/null)
     then
       c_exit=0
@@ -423,19 +363,79 @@ while [ "$converge" != "$converged" ] && [ $cycle -le 14 ]
     111) converge="$converge$(printf "\xE2\x98\xB7") ";;
     esac
 
-    if (virsh net-info default | grep "Autostart:.*yes" > /dev/null)
+    if (virsh net-info default | grep "Active:.*yes" > /dev/null)
     then
       c_exit=0
       echo -en "\033[0;32m"
-      echo -e "  \xE2\x9C\x93 Virsh default network autostart should be enabled"
+      echo -e "  \xE2\x9C\x93 Virsh default network should be active"
       echo -en "\033[0m"
       u_exit=1
     else
       c_exit=1
       echo -en "\033[0;31m"
-      echo -e "  \xE2\x9C\x97 Virsh default network autostart should be enabled"
+      echo -e "  \xE2\x9C\x97 Virsh default network should be active"
       echo -en "\033[0m"
-      u_out=$(virsh net-autostart default)
+      u_out=$(virsh net-start default)
+      u_exit=$?
+    fi
+    r_exit=$?
+    # echo "$r_exit$c_exit$u_exit"
+    # set any non zero value as 1 for read 
+    if [ $r_exit -ne 0 ]; then r_exit=1; fi
+    case "$r_exit$c_exit$u_exit" in
+    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
+    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
+    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
+    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
+    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
+    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
+    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
+    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
+    esac
+
+    if (pacman -Q wget > /dev/null)
+    then
+      c_exit=0
+      echo -en "\033[0;32m"
+      echo -e "  \xE2\x9C\x93 wget should be installed"
+      echo -en "\033[0m"
+      u_exit=1
+    else
+      c_exit=1
+      echo -en "\033[0;31m"
+      echo -e "  \xE2\x9C\x97 wget should be installed"
+      echo -en "\033[0m"
+      u_out=$(sudo pacman -S wget --noconfirm)
+      u_exit=$?
+    fi
+    r_exit=$?
+    # echo "$r_exit$c_exit$u_exit"
+    # set any non zero value as 1 for read 
+    if [ $r_exit -ne 0 ]; then r_exit=1; fi
+    case "$r_exit$c_exit$u_exit" in
+    000) converge="$converge$(printf "\xE2\x98\xB0") ";;
+    001) converge="$converge$(printf "\xE2\x98\xB1") ";;
+    010) converge="$converge$(printf "\xE2\x98\xB2") ";;
+    011) converge="$converge$(printf "\xE2\x98\xB3") ";;
+    100) converge="$converge$(printf "\xE2\x98\xB4") ";;
+    101) converge="$converge$(printf "\xE2\x98\xB5") ";;
+    110) converge="$converge$(printf "\xE2\x98\xB6") ";;
+    111) converge="$converge$(printf "\xE2\x98\xB7") ";;
+    esac
+
+    if (pacman -Q libvirt > /dev/null)
+    then
+      c_exit=0
+      echo -en "\033[0;32m"
+      echo -e "  \xE2\x9C\x93 libvirt should be installed"
+      echo -en "\033[0m"
+      u_exit=1
+    else
+      c_exit=1
+      echo -en "\033[0;31m"
+      echo -e "  \xE2\x9C\x97 libvirt should be installed"
+      echo -en "\033[0m"
+      u_out=$(sudo pacman -S libvirt --noconfirm)
       u_exit=$?
     fi
     r_exit=$?
