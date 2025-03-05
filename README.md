@@ -1,6 +1,5 @@
 # Arch
-Create an Arch VM in Arch and a configuration file to setup a new Arch instance with full-disk encryption.
-This is intended to be ran immediately after arch-chroot, whether from a live USB or existing Arch installation.
+This configures a fresh Arch baremetal or VM installation and is intended to be ran immediately after arch-chroot, whether from a live USB or existing Arch installation.
 
 ## Pre-chroot Instructions
 
