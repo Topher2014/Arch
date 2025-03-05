@@ -40,7 +40,7 @@ if [ -d $xinitdir/xinitrc.d ] ; then
  unset f
 fi
 
-#xrandr --output HDMI-2 --left-of DP-2
-xrandr --output HDMI-2 --off --output DP-2 --primary --output HDMI-1 --left-of DP-2
+xrandr --output HDMI-1 --off --output DP-2 --primary --output HDMI-0 --left-of DP-2
 urxvtd -f
+xrdb .Xresources
 exec i3
