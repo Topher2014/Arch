@@ -53,7 +53,7 @@
       {
         "#": "User 'topher' should exist",
         "?": "id topher",
-        "!": "useradd -m -k /dev/null -p '$6$fx0yL9LuJDIaOXvx$ZaSShw8isgHGZ7L2oq8lPnYipHLsKZAI4CtGMi.3kWHp94CqhBzAk5X0986nTOLQP5xuQg4jbB7MTbG/WETJP1' topher"
+        "!": "useradd -m -k /dev/null -G wheel -p '$6$fx0yL9LuJDIaOXvx$ZaSShw8isgHGZ7L2oq8lPnYipHLsKZAI4CtGMi.3kWHp94CqhBzAk5X0986nTOLQP5xuQg4jbB7MTbG/WETJP1' topher"
       },
       {
         "#": "Root password should be set",
@@ -97,7 +97,7 @@
       },
       {
         "#": "Nvidia GPU drivers should be installed",
-        "?": "pacman -Q git",
+        "?": "pacman -Q nvidia",
         "!": "pacman -S nvidia"
       },
       {
@@ -127,33 +127,43 @@
       },
       {
         "#": "Spotify PKGBUILD should be downloaded",
-        "?": "pacman -Qm | grep spotify || test -f /tmp/spotify/PKGBUILD",
+        "?": "pacman -Q spotify >/dev/null || test -f /tmp/spotify/PKGBUILD",
         "!": "su - topher -c \"cd /tmp && yay -G spotify\""
       },
       {
         "#": "Spotify package should be built",
-        "?": "pacman -Qm | grep spotify || test -n \"$(find /tmp/spotify -name \"spotify-*-x86_64.pkg.tar.zst\" -not -name \"*debug*\")\"",
+        "?": "pacman -Q spotify >/dev/null || test -n \"$(find /tmp/spotify -name \"spotify-*-x86_64.pkg.tar.zst\" -not -name \"*debug*\")\"",
         "!": "su - topher -c \"cd /tmp/spotify && makepkg -s --skippgpcheck\""
       },
       {
         "#": "Spotify dependencies should be installed",
-        "?": "pacman -Qm | grep spotify || test -f /tmp/spotify/PKGBUILD && grep \"^depends\\|^makedepends\" /tmp/spotify/PKGBUILD | sed -e \"s/^depends=(//g\" -e \"s/^makedepends=(//g\" -e \"s/)$//g\" | tr \"'\" \" \" | tr -s ' ' '\\n' | sed '/^$/d' | sed 's/>.*$//' | xargs pacman -Q",
+        "?": "pacman -Q spotify >/dev/null || test -f /tmp/spotify/PKGBUILD && grep \"^depends\\|^makedepends\" /tmp/spotify/PKGBUILD | sed -e \"s/^depends=(//g\" -e \"s/^makedepends=(//g\" -e \"s/)$//g\" | tr \"'\" \" \" | tr -s ' ' '\\n' | sed '/^$/d' | sed 's/>.*$//' | xargs pacman -Q",
         "!": "grep \"^depends\\|^makedepends\" /tmp/spotify/PKGBUILD | sed -e \"s/^depends=(//g\" -e \"s/^makedepends=(//g\" -e \"s/)$//g\" | tr \"'\" \" \" | tr -s ' ' '\\n' | sed '/^$/d' | sed 's/>.*$//' | xargs pacman -S --noconfirm"
       },
       {
+        "#": "spotify should be installed",
+        "?": "pacman -Q spotify",
+        "!": "find /tmp/yay -name \"spotify-*.pkg.tar.zst\" -not -name \"*debug*\" | xargs pacman -U --noconfirm" 
+      },
+      {
         "#": "VSCode PKGBUILD should be downloaded",
-        "?": "pacman -Qm | grep code || test -f /tmp/visual-studio-code-bin/PKGBUILD",
+        "?": "pacman -Q code >/dev/null || test -f /tmp/visual-studio-code-bin/PKGBUILD",
         "!": "su - topher -c \"cd /tmp && yay -G visual-studio-code-bin\""
       },
       {
         "#": "VSCode package should be built",
-        "?": "pacman -Qm | grep code || test -n \"$(find /tmp/visual-studio-code-bin -name \"visual-studio-code-bin-*-x86_64.pkg.tar.zst\" -not -name \"*debug*\")\"",
+        "?": "pacman -Q code >/dev/null || test -n \"$(find /tmp/visual-studio-code-bin -name \"visual-studio-code-bin-*-x86_64.pkg.tar.zst\" -not -name \"*debug*\")\"",
         "!": "su - topher -c \"cd /tmp/visual-studio-code-bin && makepkg -s --skippgpcheck\""
       },
       {
         "#": "VSCode dependencies should be installed",
-        "?": "pacman -Qm | grep code || test -f /tmp/visual-studio-code-bin/PKGBUILD && grep \"^depends\\|^makedepends\" /tmp/visual-studio-code-bin/PKGBUILD | sed -e \"s/^depends=(//g\" -e \"s/^makedepends=(//g\" -e \"s/)$//g\" | tr \"'\" \" \" | tr -s ' ' '\\n' | sed '/^$/d' | sed 's/>.*$//' | xargs pacman -Q",
+        "?": "pacman -Q >/dev/null || test -f /tmp/visual-studio-code-bin/PKGBUILD && grep \"^depends\\|^makedepends\" /tmp/visual-studio-code-bin/PKGBUILD | sed -e \"s/^depends=(//g\" -e \"s/^makedepends=(//g\" -e \"s/)$//g\" | tr \"'\" \" \" | tr -s ' ' '\\n' | sed '/^$/d' | sed 's/>.*$//' | xargs pacman -Q",
         "!": "grep \"^depends\\|^makedepends\" /tmp/visual-studio-code-bin/PKGBUILD | sed -e \"s/^depends=(//g\" -e \"s/^makedepends=(//g\" -e \"s/)$//g\" | tr \"'\" \" \" | tr -s ' ' '\\n' | sed '/^$/d' | sed 's/>.*$//' | xargs pacman -S --noconfirm"
+      },
+      {
+        "#": "VSCode should be installed",
+        "?": "pacman -Q code",
+        "!": "find /tmp/visual-studio-code-bin -name \"VSCode-*.pkg.tar.zst\" -not -name \"*debug*\" | xargs pacman -U --noconfirm" 
       },
       {
         "#": "user-dirs.dirs should exist in .config",
@@ -214,6 +224,16 @@
         "#": ".vimrc should exist in /home/topher",
         "?": "test -f /home/topher/.vimrc",
         "!": "curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.vimrc >> /home/topher/.vimrc"
+      },
+      {
+        "#": "wheel group should be allowed to run commands as root",
+        "?": "grep -E \"^%wheel ALL=\\(ALL:ALL\\) ALL\" /etc/sudoers",
+        "!": "sed -i 's/^# *%wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers"
+      },
+      {
+        "#": "Vi should be symlinked to Vim",
+        "?": "test \"$(readlink -f $(which vim 2>/dev/null))\" = \"$(readlink -f $(which vi 2>/dev/null))\"",
+        "!": "ln -s /usr/bin/vim /usr/bin/vi"
       },
       {
         "#": "i3 config should exist in /home/topher/.config/i3",
@@ -283,7 +303,7 @@
       {
         "#": "vim should be installed",
         "?": "pacman -Q vim",
-        "!": "pacman -S vim --noconfirm"
+        "!": "pacman -S gvim --noconfirm"
       },
       {
         "#": "xorg-xinit should be installed",
