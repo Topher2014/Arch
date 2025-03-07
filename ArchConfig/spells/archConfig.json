@@ -198,32 +198,32 @@
       {
         "#": ".Xresources should exist in /home/topher",
         "?": "test -f /home/topher/.Xresources",
-        "!": "curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.Xresources >> /home/topher/.Xresources"
+        "!": "su - topher -c 'curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.Xresources >> /home/topher/.Xresources'" 
       },
       {
         "#": ".bash_profile should exist in /home/topher",
         "?": "test -f /home/topher/.bash_profile",
-        "!": "curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.bash_profile >> /home/topher/.bash_profile"
+        "!": "su - topher -c 'curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.bash_profile >> /home/topher/.bash_profile'" 
       },
       {
         "#": ".bashrc should exist in /home/topher",
         "?": "test -f /home/topher/.bashrc",
-        "!": "curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.bashrc >> /home/topher/.bashrc"
+        "!": "su - topher -c 'curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.bashrc >> /home/topher/.bashrc'" 
       },
       {
         "#": ".gitconfig should exist in /home/topher",
         "?": "test -f /home/topher/.gitconfig",
-        "!": "curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.gitconfig >> /home/topher/.gitconfig"
+        "!": "su - topher -c 'curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.gitconfig >> /home/topher/.gitconfig'" 
       },
       {
         "#": ".xinitrc should exist in /home/topher",
         "?": "test -f /home/topher/.xinitrc",
-        "!": "curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.xinitrc >> /home/topher/.xinitrc"
+        "!": "su - topher -c 'curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.xinitrc >> /home/topher/.xinitrc'" 
       },
       {
         "#": ".vimrc should exist in /home/topher",
         "?": "test -f /home/topher/.vimrc",
-        "!": "curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.vimrc >> /home/topher/.vimrc"
+        "!": "su - topher -c 'curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.vimrc >> /home/topher/.vimrc'" 
       },
       {
         "#": "wheel group should be allowed to run commands as root",
@@ -251,9 +251,14 @@
         "!": "su - topher -c 'mkdir -p /home/topher/.urxvt/ext && curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.urxvt/ext/resize-font >> /home/topher/.urxvt/ext/resize-font'"
       },
       {
-        "#": "noto-fonts should be installed",
+        "#": "noto-fonts fonts should be installed",
         "?": "pacman -Q noto-fonts",
         "!": "pacman -S noto-fonts --noconfirm"
+      },
+      {
+        "#": "ttf-dejavu fonts should be installed",
+        "?": "pacman -Q ttf-dejavu",
+        "!": "pacman -S ttf-dejavu --noconfirm"
       },
       {
         "#": "cifs-utils should be installed",
