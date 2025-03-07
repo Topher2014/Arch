@@ -23,7 +23,7 @@ mkfs.ext4 /dev/mapper/root
 mount /dev/mapper/root /mnt
 
 mkfs.fat -F 32 /dev/efi_system_partition
-mount --mkdir /dev/sda1 /mnt/boot
+mount --mkdir /dev/efi_system_partition /mnt/efi_system_partition
 
 mkswap /dev/swap_partition
 
