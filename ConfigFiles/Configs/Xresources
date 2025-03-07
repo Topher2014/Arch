@@ -1,6 +1,7 @@
 URxvt.geometry: 115x91
-URxvt.font: xft:Liberation Mono:antialias=false:hinting=true:pixelsize=24
-URxvt.boldFont: xft:Liberation Mono:bold:antialias=false:hinting=true:pixelsize=27
+URxvt.font: xft:DejaVu Mono:antialias=false:hinting=true:pixelsize=24
+URxvt.boldFont: xft:DejaVu Mono:bold:antialias=false:hinting=true:pixelsize=27
+URxvt.letterSpace: -4
 URxvt.foreground: #FFFFFF
 URxvt.background: #000000
 URxvt.depth: 24 
