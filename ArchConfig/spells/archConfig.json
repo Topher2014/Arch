@@ -98,7 +98,7 @@
       {
         "#": "Nvidia GPU drivers should be installed",
         "?": "pacman -Q nvidia",
-        "!": "pacman -S nvidia"
+        "!": "pacman -S nvidia --noconfirm"
       },
       {
         "#": "base-devel should be installed",
@@ -301,8 +301,8 @@
         "!": "pacman -S firefox --noconfirm"
       },
       {
-        "#": "vim should be installed",
-        "?": "pacman -Q vim",
+        "#": "gvim should be installed",
+        "?": "pacman -Q gvim",
         "!": "pacman -S gvim --noconfirm"
       },
       {
