@@ -916,4 +916,3058 @@ otherwise, please restart your installation.
 
 [0m[0;37mSpellcaster failed to converge in 15 cycles
 Convergence time: 13 seconds
+[0m[0;37m __                        
+(_ ._  _ || _ _. __|_ _ ._ 
+__)|_)(/_||(_(_|_> |_(/_|  
+   |                       
+Name: archConfig
+ID: 1fc89af5-7130-4e3f-a7f6-945ff506c620
+Description: A spell to configure a new Arch instance
+Identity: topherludlow@protonmail.com
+Converging 68 resources...
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;31m  ✗ .bash_profile should exist in /home/topher
+[0mPassword: su: Authentication failure
+[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ Desktop, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ openssh should be installed
+[0mgrep: /etc/sudoers: Permission denied
+[0;31m  ✗ wheel group should be allowed to run commands as root
+[0msed: can't read /etc/sudoers: Permission denied
+[0;32m  ✓ Kernel parameters should be set for decryption
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ .config should exist in /home/topher
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ docker should be installed
+[0m[0;31m  ✗ .bashrc should exist in /home/topher
+[0mPassword: [0;37m __                        
+(_ ._  _ || _ _. __|_ _ ._ 
+__)|_)(/_||(_(_|_> |_(/_|  
+   |                       
+Name: archConfig
+ID: 1fc89af5-7130-4e3f-a7f6-945ff506c620
+Description: A spell to configure a new Arch instance
+Identity: topherludlow@protonmail.com
+Converging 68 resources...
+[0m[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ .Xresources should exist in /home/topher
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ .gitconfig should exist in /home/topher
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ spotify should be installed
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ efibootmgr should be installed
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ .config should exist in /home/topher
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ Desktop, Downloads, and Documents directories should exist
+[0m[0;31m  ✗ .bashrc should exist in /home/topher
+[0m-bash: line 1: /home/topher/.bashrc: No such file or directory
+[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;31m  ✗ .bash_profile should exist in /home/topher
+[0m-bash: line 1: /home/topher/.bash_profile: No such file or directory
+[0;32m  ✓ .xinitrc should exist in /home/topher
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0mcycle 0
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ .Xresources should exist in /home/topher
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ .gitconfig should exist in /home/topher
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ spotify should be installed
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ efibootmgr should be installed
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ .config should exist in /home/topher
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ Desktop, Downloads, and Documents directories should exist
+[0m[0;31m  ✗ .bashrc should exist in /home/topher
+[0m-bash: line 1: /home/topher/.bashrc: No such file or directory
+[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;31m  ✗ .bash_profile should exist in /home/topher
+[0m-bash: line 1: /home/topher/.bash_profile: No such file or directory
+[0;32m  ✓ .xinitrc should exist in /home/topher
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0mcycle 1
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ .Xresources should exist in /home/topher
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ .gitconfig should exist in /home/topher
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ spotify should be installed
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ efibootmgr should be installed
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ .config should exist in /home/topher
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ Desktop, Downloads, and Documents directories should exist
+[0m[0;31m  ✗ .bashrc should exist in /home/topher
+[0m-bash: line 1: /home/topher/.bashrc: No such file or directory
+[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;31m  ✗ .bash_profile should exist in /home/topher
+[0m-bash: line 1: /home/topher/.bash_profile: No such file or directory
+[0;32m  ✓ .xinitrc should exist in /home/topher
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0mcycle 2
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ .Xresources should exist in /home/topher
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ .gitconfig should exist in /home/topher
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ spotify should be installed
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ efibootmgr should be installed
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ .config should exist in /home/topher
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ Desktop, Downloads, and Documents directories should exist
+[0m[0;31m  ✗ .bashrc should exist in /home/topher
+[0m-bash: line 1: /home/topher/.bashrc: No such file or directory
+[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;31m  ✗ .bash_profile should exist in /home/topher
+[0m-bash: line 1: /home/topher/.bash_profile: No such file or directory
+[0;32m  ✓ .xinitrc should exist in /home/topher
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0mcycle 3
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ .Xresources should exist in /home/topher
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ .gitconfig should exist in /home/topher
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ spotify should be installed
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ efibootmgr should be installed
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ .config should exist in /home/topher
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ Desktop, Downloads, and Documents directories should exist
+[0m[0;31m  ✗ .bashrc should exist in /home/topher
+[0m-bash: line 1: /home/topher/.bashrc: No such file or directory
+[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;31m  ✗ .bash_profile should exist in /home/topher
+[0m-bash: line 1: /home/topher/.bash_profile: No such file or directory
+[0;32m  ✓ .xinitrc should exist in /home/topher
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0mcycle 4
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ .Xresources should exist in /home/topher
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ .gitconfig should exist in /home/topher
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ spotify should be installed
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ efibootmgr should be installed
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ .config should exist in /home/topher
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ Desktop, Downloads, and Documents directories should exist
+[0m[0;31m  ✗ .bashrc should exist in /home/topher
+[0m-bash: line 1: /home/topher/.bashrc: No such file or directory
+[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;31m  ✗ .bash_profile should exist in /home/topher
+[0m-bash: line 1: /home/topher/.bash_profile: No such file or directory
+[0;32m  ✓ .xinitrc should exist in /home/topher
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0mcycle 5
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ .Xresources should exist in /home/topher
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ .gitconfig should exist in /home/topher
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ spotify should be installed
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ efibootmgr should be installed
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ .config should exist in /home/topher
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ Desktop, Downloads, and Documents directories should exist
+[0m[0;31m  ✗ .bashrc should exist in /home/topher
+[0m-bash: line 1: /home/topher/.bashrc: No such file or directory
+[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;31m  ✗ .bash_profile should exist in /home/topher
+[0m-bash: line 1: /home/topher/.bash_profile: No such file or directory
+[0;32m  ✓ .xinitrc should exist in /home/topher
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0mcycle 6
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ .Xresources should exist in /home/topher
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ .gitconfig should exist in /home/topher
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ spotify should be installed
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ efibootmgr should be installed
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ .config should exist in /home/topher
+[0m[0;37m __                        
+(_ ._  _ || _ _. __|_ _ ._ 
+__)|_)(/_||(_(_|_> |_(/_|  
+   |                       
+Name: archConfig
+ID: d13fba04-a70c-4499-81d3-2e170ac399ec
+Description: A spell to configure a new Arch instance
+Identity: topherludlow@protonmail.com
+Converging 68 resources...
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ .bash_profile should exist in /home/topher
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;31m  ✗ .gitconfig should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ efibootmgr should be installed
+[0m[0;31m  ✗ .Xresources should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.Xresources': File exists
+[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;31m  ✗ .xinitrc should be symlinked
+[0mln: failed to create symbolic link '/home/topher/.xinitrc': File exists
+[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ Git should be installed
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;31m  ✗ Config files should exist
+[0m  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 28950    0 28950    0     0  52298      0 --:--:-- --:--:-- --:--:-- 52298
+[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ .bashrc should exist in /home/topher
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ discord should be installed
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0mcycle 0
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☲ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ .bash_profile should exist in /home/topher
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;31m  ✗ .gitconfig should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ efibootmgr should be installed
+[0m[0;31m  ✗ .Xresources should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.Xresources': File exists
+[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;31m  ✗ .xinitrc should be symlinked
+[0mln: failed to create symbolic link '/home/topher/.xinitrc': File exists
+[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ Git should be installed
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;31m  ✗ Config files should exist
+[0m  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 10182    0 10182    0     0  31627      0 --:--:-- --:--:-- --:--:-- 31627100 28950    0 28950    0     0  83281      0 --:--:-- --:--:-- --:--:--  733k
+[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ .bashrc should exist in /home/topher
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ discord should be installed
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0mcycle 1
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☲ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ .bash_profile should exist in /home/topher
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;31m  ✗ .gitconfig should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ efibootmgr should be installed
+[0m[0;31m  ✗ .Xresources should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.Xresources': File exists
+[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;31m  ✗ .xinitrc should be symlinked
+[0mln: failed to create symbolic link '/home/topher/.xinitrc': File exists
+[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ Git should be installed
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;31m  ✗ Config files should exist
+[0m  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 28950    0 28950    0     0  67168      0 --:--:-- --:--:-- --:--:-- 67168
+mv: cannot overwrite './Configs/Configs': Directory not empty
+[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ .bashrc should exist in /home/topher
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ discord should be installed
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0mcycle 2
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ .bash_profile should exist in /home/topher
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;31m  ✗ .gitconfig should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ efibootmgr should be installed
+[0m[0;31m  ✗ .Xresources should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.Xresources': File exists
+[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;31m  ✗ .xinitrc should be symlinked
+[0mln: failed to create symbolic link '/home/topher/.xinitrc': File exists
+[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ Git should be installed
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;31m  ✗ Config files should exist
+[0m  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 28950    0 28950    0     0  59923      0 --:--:-- --:--:-- --:--:-- 59923
+replace ./Arch-main/ConfigFiles/Configs/.Xresources? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [{ENTER}]
+replace ./Arch-main/ConfigFiles/Configs/.Xresources? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [end_time=]
+replace ./Arch-main/ConfigFiles/Configs/.Xresources? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response ["$(date -]
+replace ./Arch-main/ConfigFiles/Configs/.Xresources? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [u +%s)"]
+replace ./Arch-main/ConfigFiles/Configs/.Xresources? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [{ENTER}]
+replace ./Arch-main/ConfigFiles/Configs/.Xresources? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [{ENTER}]
+replace ./Arch-main/ConfigFiles/Configs/.Xresources? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [if [ "$co]
+replace ./Arch-main/ConfigFiles/Configs/.Xresources? [y]es, [n]o, [A]ll, [N]one, [r]ename: replace ./Arch-main/ConfigFiles/Configs/.bash_profile? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [ "$conver]
+replace ./Arch-main/ConfigFiles/Configs/.bash_profile? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [ged" ]]
+replace ./Arch-main/ConfigFiles/Configs/.bash_profile? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [then]
+replace ./Arch-main/ConfigFiles/Configs/.bash_profile? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [  elapsed]
+replace ./Arch-main/ConfigFiles/Configs/.bash_profile? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [="$((end_]
+replace ./Arch-main/ConfigFiles/Configs/.bash_profile? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [time-star]
+replace ./Arch-main/ConfigFiles/Configs/.bash_profile? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [t_time))"]
+replace ./Arch-main/ConfigFiles/Configs/.bash_profile? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [{ENTER}]
+replace ./Arch-main/ConfigFiles/Configs/.bash_profile? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [  echo -e]
+replace ./Arch-main/ConfigFiles/Configs/.bash_profile? [y]es, [n]o, [A]ll, [N]one, [r]ename: replace ./Arch-main/ConfigFiles/Configs/.bashrc? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [;37m"]
+replace ./Arch-main/ConfigFiles/Configs/.bashrc? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [  echo -e]
+replace ./Arch-main/ConfigFiles/Configs/.bashrc? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [ "Spellca]
+replace ./Arch-main/ConfigFiles/Configs/.bashrc? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [ster conv]
+replace ./Arch-main/ConfigFiles/Configs/.bashrc? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [erged in ]
+replace ./Arch-main/ConfigFiles/Configs/.bashrc? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [$cycle cy]
+replace ./Arch-main/ConfigFiles/Configs/.bashrc? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [cles"]
+replace ./Arch-main/ConfigFiles/Configs/.bashrc? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [  echo -e]
+replace ./Arch-main/ConfigFiles/Configs/.bashrc? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [ "Converg]
+replace ./Arch-main/ConfigFiles/Configs/.bashrc? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [ence time]
+replace ./Arch-main/ConfigFiles/Configs/.bashrc? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [: $elapse]
+replace ./Arch-main/ConfigFiles/Configs/.bashrc? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [d seconds]
+replace ./Arch-main/ConfigFiles/Configs/.bashrc? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response ["]
+replace ./Arch-main/ConfigFiles/Configs/.bashrc? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [  (( RAND]
+replace ./Arch-main/ConfigFiles/Configs/.bashrc? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [OM%20 == ]
+replace ./Arch-main/ConfigFiles/Configs/.bashrc? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [0 )) && c]
+replace ./Arch-main/ConfigFiles/Configs/.bashrc? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [at <<-EOF]
+replace ./Arch-main/ConfigFiles/Configs/.bashrc? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [ | base64]
+replace ./Arch-main/ConfigFiles/Configs/.bashrc? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [ -d | gzi]
+replace ./Arch-main/ConfigFiles/Configs/.bashrc? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [p -dc]
+replace ./Arch-main/ConfigFiles/Configs/.bashrc? [y]es, [n]o, [A]ll, [N]one, [r]ename: error:  invalid response [H4sIAAAAA]
+replace ./Arch-main/ConfigFiles/Configs/.bashrc? [y]es, [n]o, [A]ll, [N]one, [r]ename: mv: cannot overwrite './Configs/Configs': Directory not empty
+[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ .bashrc should exist in /home/topher
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ discord should be installed
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0mcycle 3
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ .bash_profile should exist in /home/topher
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;31m  ✗ .gitconfig should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ efibootmgr should be installed
+[0m[0;31m  ✗ .Xresources should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.Xresources': File exists
+[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;31m  ✗ .xinitrc should be symlinked
+[0mln: failed to create symbolic link '/home/topher/.xinitrc': File exists
+[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ Git should be installed
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;31m  ✗ Config files should exist
+[0m  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 28950    0 28950    0     0   101k      0 --:--:-- --:--:-- --:--:--  101k
+replace ./Arch-main/ConfigFiles/Configs/.Xresources? [y]es, [n]o, [A]ll, [N]one, [r]ename:  NULL
+(EOF or read error, treating as "[N]one" ...)
+[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ .bashrc should exist in /home/topher
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ discord should be installed
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0mcycle 4
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ .bash_profile should exist in /home/topher
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;31m  ✗ .gitconfig should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+[0;37m __                        
+(_ ._  _ || _ _. __|_ _ ._ 
+__)|_)(/_||(_(_|_> |_(/_|  
+   |                       
+Name: archConfig
+ID: 19d08191-ea8e-415d-b5a0-0e1c4b599da7
+Description: A spell to configure a new Arch instance
+Identity: topherludlow@protonmail.com
+Converging 68 resources...
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ dhcpcd should be installed
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;31m  ✗ .xinitrc should be symlinked
+[0mln: failed to create symbolic link '/home/topher/.xinitrc': File exists
+[0;31m  ✗ .Xresources should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.Xresources': File exists
+[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;31m  ✗ Config files should exist
+[0m  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 28950  100 28950    0     0  55773      0 --:--:-- --:--:-- --:--:-- 55773
+mv: cannot stat '/home/topher/Desktop/Arch-main/ConfigFiles/Configs/': No such file or directory
+[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ .bash_profile should exist in /home/topher
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ efibootmgr should be installed
+[0m[0;32m  ✓ base-devel should be installed
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ .bashrc should exist in /home/topher
+[0m[0;31m  ✗ .gitconfig should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ docker should be installed
+[0mcycle 0
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☳ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+grep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ dhcpcd should be installed
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;31m  ✗ .xinitrc should be symlinked
+[0mln: failed to create symbolic link '/home/topher/.xinitrc': File exists
+[0;31m  ✗ .Xresources should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.Xresources': File exists
+[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ Config files should exist
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ .bash_profile should exist in /home/topher
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ efibootmgr should be installed
+[0m[0;32m  ✓ base-devel should be installed
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ .bashrc should exist in /home/topher
+[0m[0;31m  ✗ .gitconfig should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ docker should be installed
+[0mcycle 1
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+grep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ dhcpcd should be installed
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;31m  ✗ .xinitrc should be symlinked
+[0mln: failed to create symbolic link '/home/topher/.xinitrc': File exists
+[0;31m  ✗ .Xresources should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.Xresources': File exists
+[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ Config files should exist
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ .bash_profile should exist in /home/topher
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ efibootmgr should be installed
+[0m[0;32m  ✓ base-devel should be installed
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ .bashrc should exist in /home/topher
+[0m[0;31m  ✗ .gitconfig should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ docker should be installed
+[0mcycle 2
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+grep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ dhcpcd should be installed
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;31m  ✗ .xinitrc should be symlinked
+[0mln: failed to create symbolic link '/home/topher/.xinitrc': File exists
+[0;31m  ✗ .Xresources should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.Xresources': File exists
+[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ Config files should exist
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ .bash_profile should exist in /home/topher
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ efibootmgr should be installed
+[0m[0;32m  ✓ base-devel should be installed
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ .bashrc should exist in /home/topher
+[0m[0;31m  ✗ .gitconfig should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ docker should be installed
+[0mcycle 3
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+grep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;37m __                        
+(_ ._  _ || _ _. __|_ _ ._ 
+__)|_)(/_||(_(_|_> |_(/_|  
+   |                       
+Name: archConfig
+ID: 2e5026e2-979a-49f0-aa86-b4a4c31c56d9
+Description: A spell to configure a new Arch instance
+Identity: topherludlow@protonmail.com
+Converging 68 resources...
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ Git should be installed
+[0m[0;31m  ✗ Config files should exist
+[0m  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 28950  100 28950    0     0  65930      0 --:--:-- --:--:-- --:--:-- 65930
+mv: cannot stat '/home/topher/Desktop/Arch-main/ConfigFiles/Configs/': No such file or directory
+[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ efibootmgr should be installed
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;31m  ✗ .gitconfig should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+grep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ .bashrc should exist in /home/topher
+[0m[0;32m  ✓ gvim should be installed
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ Root password should be set
+[0m[0;31m  ✗ .Xresources should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.Xresources': File exists
+[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;31m  ✗ .xinitrc should be symlinked
+[0mln: failed to create symbolic link '/home/topher/.xinitrc': File exists
+[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ .bash_profile should exist in /home/topher
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0mcycle 0
+☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ Config files should exist
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ efibootmgr should be installed
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;31m  ✗ .gitconfig should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+grep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ .bashrc should exist in /home/topher
+[0m[0;32m  ✓ gvim should be installed
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ Root password should be set
+[0m[0;31m  ✗ .Xresources should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.Xresources': File exists
+[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;31m  ✗ .xinitrc should be symlinked
+[0mln: failed to create symbolic link '/home/topher/.xinitrc': File exists
+[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ .bash_profile should exist in /home/topher
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0mcycle 1
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ Config files should exist
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ efibootmgr should be installed
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;31m  ✗ .gitconfig should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+grep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ .bashrc should exist in /home/topher
+[0m[0;32m  ✓ gvim should be installed
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ Root password should be set
+[0m[0;31m  ✗ .Xresources should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.Xresources': File exists
+[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;31m  ✗ .xinitrc should be symlinked
+[0mln: failed to create symbolic link '/home/topher/.xinitrc': File exists
+[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ .bash_profile should exist in /home/topher
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0mcycle 2
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ Config files should exist
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ efibootmgr should be installed
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;31m  ✗ .gitconfig should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+grep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ .bashrc should exist in /home/topher
+[0m[0;32m  ✓ gvim should be installed
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ Root password should be set
+[0m[0;31m  ✗ .Xresources should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.Xresources': File exists
+[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;31m  ✗ .xinitrc should be symlinked
+[0mln: failed to create symbolic link '/home/topher/.xinitrc': File exists
+[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ .bash_profile should exist in /home/topher
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ cifs-utils should be installed
+[0m[0;37m __                        
+(_ ._  _ || _ _. __|_ _ ._ 
+__)|_)(/_||(_(_|_> |_(/_|  
+   |                       
+Name: archConfig
+ID: 7ea97b04-2894-41f0-9bac-79926b8ffbdf
+Description: A spell to configure a new Arch instance
+Identity: topherludlow@protonmail.com
+Converging 68 resources...
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;31m  ✗ .Xresources should exist in /home/topher
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;31m  ✗ .vimrc should be symlinked
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;31m  ✗ .gitconfig should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+[0;32m  ✓ Git should be installed
+[0m[0;31m  ✗ .xinitrc should be symlinked
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ .bashrc should exist in /home/topher
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;31m  ✗ Config files should exist
+[0m  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 28950  100 28950    0     0  69481      0 --:--:-- --:--:-- --:--:-- 69481
+mv: cannot stat '/home/topher/Desktop/Arch-main/ConfigFiles/Configs/': No such file or directory
+[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ .bash_profile should exist in /home/topher
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ efibootmgr should be installed
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ cifs-utils should be installed
+[0mcycle 0
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☲ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☲ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☲ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ .Xresources should exist in /home/topher
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;31m  ✗ .gitconfig should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ .xinitrc should be symlinked
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ .bashrc should exist in /home/topher
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ Config files should exist
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ .bash_profile should exist in /home/topher
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ efibootmgr should be installed
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ cifs-utils should be installed
+[0mcycle 1
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ .Xresources should exist in /home/topher
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;31m  ✗ .gitconfig should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ .xinitrc should be symlinked
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ .bashrc should exist in /home/topher
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ Config files should exist
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ .bash_profile should exist in /home/topher
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ efibootmgr should be installed
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ cifs-utils should be installed
+[0mcycle 2
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ .Xresources should exist in /home/topher
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;31m  ✗ .gitconfig should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ .xinitrc should be symlinked
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ .bashrc should exist in /home/topher
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ Config files should exist
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ .bash_profile should exist in /home/topher
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ efibootmgr should be installed
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ cifs-utils should be installed
+[0mcycle 3
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ .Xresources should exist in /home/topher
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;31m  ✗ .gitconfig should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ .xinitrc should be symlinked
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ .bashrc should exist in /home/topher
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ Config files should exist
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ .bash_profile should exist in /home/topher
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ efibootmgr should be installed
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ cifs-utils should be installed
+[0mcycle 4
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ .Xresources should exist in /home/topher
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;31m  ✗ .gitconfig should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ .xinitrc should be symlinked
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ .bashrc should exist in /home/topher
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ Config files should exist
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ .bash_profile should exist in /home/topher
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ efibootmgr should be installed
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ cifs-utils should be installed
+[0mcycle 5
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ .Xresources should exist in /home/topher
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;31m  ✗ .gitconfig should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ .xinitrc should be symlinked
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;37m __                        
+(_ ._  _ || _ _. __|_ _ ._ 
+__)|_)(/_||(_(_|_> |_(/_|  
+   |                       
+Name: archConfig
+ID: baa63fcd-477c-4abd-bfd6-258ed781dabf
+Description: A spell to configure a new Arch instance
+Identity: topherludlow@protonmail.com
+Converging 68 resources...
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;31m  ✗ Config files should exist
+[0m  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 28950  100 28950    0     0  67703      0 --:--:-- --:--:-- --:--:-- 67703
+mv: cannot stat '/home/topher/Desktop/Arch-main/ConfigFiles/Configs/': No such file or directory
+[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ .Xresources should exist in /home/topher
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ Yay package should be built
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;31m  ✗ .gitconfig should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ .bashrc should exist in /home/topher
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ .bash_profile should exist in /home/topher
+[0m[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ dmenu should be installed
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ efibootmgr should be installed
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ .xinitrc should be symlinked
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0mcycle 0
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ Config files should exist
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ .Xresources should exist in /home/topher
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ Yay package should be built
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;31m  ✗ .gitconfig should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ .bashrc should exist in /home/topher
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ .bash_profile should exist in /home/topher
+[0m[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ dmenu should be installed
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ efibootmgr should be installed
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ .xinitrc should be symlinked
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0mcycle 1
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ Config files should exist
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ .Xresources should exist in /home/topher
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ Yay package should be built
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;31m  ✗ .gitconfig should exist in /home/topher
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ .bashrc should exist in /home/topher
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ .bash_profile should exist in /home/topher
+[0m[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ dmenu should be installed
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ efibootmgr should be installed
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ .xinitrc should be symlinked
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0mcycle 2
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ Config files should exist
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ .Xresources should exist in /home/topher
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ less should be installed
+[0m[0;37m __                        
+(_ ._  _ || _ _. __|_ _ ._ 
+__)|_)(/_||(_(_|_> |_(/_|  
+   |                       
+Name: archConfig
+ID: 44234d16-89d6-4291-8f65-37c685ab14aa
+Description: A spell to configure a new Arch instance
+Identity: topherludlow@protonmail.com
+Converging 68 resources...
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ efibootmgr should be installed
+[0m[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;31m  ✗ .gitconfig should be symlinked
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+[0;31m  ✗ Config files should exist
+[0m  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 28950  100 28950    0     0  69913      0 --:--:-- --:--:-- --:--:-- 69913
+[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ .bashrc should be symlinked
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;32m  ✓ .xinitrc should be symlinked
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ .Xresources should be symlinked
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ .bash_profile should be symlinked
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0mcycle 0
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☲ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ efibootmgr should be installed
+[0m[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;31m  ✗ .gitconfig should be symlinked
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+[0;32m  ✓ Config files should exist
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ .bashrc should be symlinked
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;32m  ✓ .xinitrc should be symlinked
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ .Xresources should be symlinked
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ .bash_profile should be symlinked
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0mcycle 1
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ efibootmgr should be installed
+[0m[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;31m  ✗ .gitconfig should be symlinked
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+[0;32m  ✓ Config files should exist
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ .bashrc should be symlinked
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;32m  ✓ .xinitrc should be symlinked
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ .Xresources should be symlinked
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ .bash_profile should be symlinked
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0mcycle 2
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ efibootmgr should be installed
+[0m[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;31m  ✗ .gitconfig should be symlinked
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+[0;32m  ✓ Config files should exist
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ .bashrc should be symlinked
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;32m  ✓ .xinitrc should be symlinked
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ .Xresources should be symlinked
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;37m __                        
+(_ ._  _ || _ _. __|_ _ ._ 
+__)|_)(/_||(_(_|_> |_(/_|  
+   |                       
+Name: archConfig
+ID: 44234d16-89d6-4291-8f65-37c685ab14aa
+Description: A spell to configure a new Arch instance
+Identity: topherludlow@protonmail.com
+Converging 68 resources...
+[0m[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ .bashrc should be symlinked
+[0m[0;32m  ✓ .xinitrc should be symlinked
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ efibootmgr should be installed
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ Config files should exist
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ .bash_profile should be symlinked
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;32m  ✓ .Xresources should be symlinked
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;31m  ✗ .gitconfig should be symlinked
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+cycle 0
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ .bashrc should be symlinked
+[0m[0;32m  ✓ .xinitrc should be symlinked
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ efibootmgr should be installed
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ Config files should exist
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ .bash_profile should be symlinked
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;32m  ✓ .Xresources should be symlinked
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;31m  ✗ .gitconfig should be symlinked
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+cycle 1
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ .bashrc should be symlinked
+[0m[0;32m  ✓ .xinitrc should be symlinked
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ efibootmgr should be installed
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ Config files should exist
+[0m[0;32m  ✓ mpv should be installed
+[0m[0;32m  ✓ ttf-dejavu fonts should be installed
+[0m[0;32m  ✓ encrypt should be set in mkinitcpio.conf
+[0m[0;32m  ✓ pulseaudio should be installed
+[0m[0;32m  ✓ .bash_profile should be symlinked
+[0m[0;32m  ✓ gvim should be installed
+[0m[0;32m  ✓ grub modules should exist
+[0m[0;32m  ✓ Steam should be installed
+[0m[0;32m  ✓ Hosts should be set in /etc/hosts
+[0m[0;32m  ✓ xorg-xrandr should be installed
+[0m[0;32m  ✓ multilib should be enabled in pacman conf
+[0m[0;32m  ✓ user-dirs.conf should exist in .config
+[0m[0;32m  ✓ Git should be installed
+[0m[0;32m  ✓ dmenu should be installed
+[0m[0;32m  ✓ i3 should be installed
+[0m[0;32m  ✓ VSCode PKGBUILD should be downloaded
+[0m[0;32m  ✓ .Xresources should be symlinked
+[0m[0;32m  ✓ noto-fonts fonts should be installed
+[0m[0;32m  ✓ user-dirs.dirs should exist in .config
+[0mgrep: /tmp/visual-studio-code-bin/PKGBUILD: No such file or directory
+[0;32m  ✓ VSCode dependencies should be installed
+[0m[0;32m  ✓ rxvt-unicode should be installed
+[0m[0;32m  ✓ Nvidia GPU drivers should be installed
+[0m[0;32m  ✓ xdg-user-dirs-update --force should be ran after .config files and dirctories exist
+[0m[0;32m  ✓ Yay should be installed
+[0m[0;32m  ✓ Hostname should be set to topherDesktop
+[0m[0;31m  ✗ .gitconfig should be symlinked
+[0mln: failed to create symbolic link '/home/topher/.gitconfig': File exists
+cycle 2
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☳ 
+☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ ☱ 
+[0;32m  ✓ base-devel should be installed
+[0m[0;32m  ✓ en_US.UTF-8 locale should be generated
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be enabled
+[0m[0;32m  ✓ Screenshots, Downloads, and Documents directories should exist
+[0m[0;32m  ✓ grub should be installed
+[0m[0;32m  ✓ dhcpcd should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for screen resolution
+[0m[0;32m  ✓ Yay package should be built
+[0m[0;32m  ✓ xorg-server should be installed
+[0m[0;32m  ✓ cifs-utils should be installed
+[0m[0;32m  ✓ docker should be installed
+[0m[0;32m  ✓ less should be installed
+[0m[0;32m  ✓ VSCode package should be built
+[0m[0;32m  ✓ wheel group should be allowed to run commands as root
+[0m[0;32m  ✓ VSCode should be installed
+[0m[0;32m  ✓ .bashrc should be symlinked
+[0m[0;32m  ✓ .xinitrc should be symlinked
+[0m[0;32m  ✓ ssh keys should exist
+[0m[0;32m  ✓ 32 bit Nvidia drivers should be installed
+[0mgrep: /tmp/spotify/PKGBUILD: No such file or directory
+[0;32m  ✓ Spotify dependencies should be installed
+[0m[0;32m  ✓ i3blocks config should exist in /home/topher/.config/i3status
+[0m[0;32m  ✓ user-dirs.locale should exist in .config
+[0m[0;32m  ✓ xorg-xinit should be installed
+[0m[0;32m  ✓ Kernel parameters should be set for decryption
+[0m[0;32m  ✓ xclip should be installed
+[0m[0;32m  ✓ Root password should be set
+[0m[0;32m  ✓ Yay repo should be cloned to /tmp/yay
+[0m[0;32m  ✓ Spotify package should be built
+[0m[0;32m  ✓ spotify should be installed
+[0m[0;32m  ✓ firefox should be installed
+[0m[0;32m  ✓ User 'topher' should exist
+[0m[0;32m  ✓ dhcpcd@ETHERNET.service should be started
+[0m[0;32m  ✓ Vi should be symlinked to Vim
+[0m[0;32m  ✓ urxvt font-resize plugin should exist
+[0m[0;32m  ✓ efibootmgr should be installed
+[0m[0;32m  ✓ openssh should be installed
+[0m[0;32m  ✓ .vimrc should be symlinked
+[0mgrep: /tmp/yay/PKGBUILD: No such file or directory
+[0;32m  ✓ Yay dependencies should be installed
+[0m[0;32m  ✓ discord should be installed
+[0m[0;32m  ✓ Spotify PKGBUILD should be downloaded
+[0m[0;32m  ✓ i3 config should exist in /home/topher/.config/i3
+[0m[0;32m  ✓ Config files should exist
+[0m[0;32m  ✓ mpv should be installed
 [0m
