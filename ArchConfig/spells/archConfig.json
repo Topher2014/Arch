@@ -11,11 +11,6 @@
         "!": "sed -i '/^#\\[multilib\\]/{N;s/^#\\[multilib\\]\\n#Include/[multilib]\\nInclude/}' /etc/pacman.conf && pacman -Sy --noconfirm" 
       },
       {
-        "#": "32 bit Nvidia drivers should be installed",
-        "?": "pacman -Q lib32-nvidia-utils",
-        "!": "pacman -S lib32-nvidia-utils --noconfirm"
-      },
-      {
         "#": "en_US.UTF-8 locale should be generated",
         "?": "locale --all-locales | grep -q \"en_US.utf8\"",
         "!": "sed -i 's/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && locale-gen"
@@ -81,34 +76,14 @@
         "!": "sed -i 's/^GRUB_GFXMODE=.*/GRUB_GFXMODE=1280x1024x32,auto/' /etc/default/grub"
       },
       {
-        "#": "grub should be installed",
-        "?": "pacman -Q grub",
-        "!": "pacman -S grub --noconfirm"
-      },
-      {
-        "#": "efibootmgr should be installed",
-        "?": "pacman -Q efibootmgr",
-        "!": "pacman -S efibootmgr --noconfirm"
-      },
-      {
         "#": "grub modules should exist",
         "?": "test -d /boot/EFI",
         "!": "grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB"
       },
       {
-        "#": "Git should be installed",
-        "?": "pacman -Q git",
-        "!": "pacman -S git --noconfirm"
-      },
-      {
-        "#": "Nvidia GPU drivers should be installed",
-        "?": "pacman -Q nvidia",
-        "!": "pacman -S nvidia --noconfirm"
-      },
-      {
-        "#": "base-devel should be installed",
-        "?": "pacman -Q base-devel",
-        "!": "pacman -S base-devel --noconfirm"
+        "#": "NAS drive should be mounted to Desktop",
+        "?": "grep -q \"192.168.88.51:/share/desktop\" /proc/mounts",
+        "!": "mount 192.168.88.51:/share/desktop /home/topher/Desktop/ && genfstab -U /"
       },
       {
         "#": "Yay repo should be cloned to /tmp/yay",
@@ -219,6 +194,36 @@
         "#": "ttf-dejavu fonts should be installed",
         "?": "pacman -Q ttf-dejavu",
         "!": "pacman -S ttf-dejavu --noconfirm"
+      },
+      {
+        "#": "32 bit Nvidia drivers should be installed",
+        "?": "pacman -Q lib32-nvidia-utils",
+        "!": "pacman -S lib32-nvidia-utils --noconfirm"
+      },
+      {
+        "#": "Git should be installed",
+        "?": "pacman -Q git",
+        "!": "pacman -S git --noconfirm"
+      },
+      {
+        "#": "Nvidia GPU drivers should be installed",
+        "?": "pacman -Q nvidia",
+        "!": "pacman -S nvidia --noconfirm"
+      },
+      {
+        "#": "base-devel should be installed",
+        "?": "pacman -Q base-devel",
+        "!": "pacman -S base-devel --noconfirm"
+      },
+      {
+        "#": "grub should be installed",
+        "?": "pacman -Q grub",
+        "!": "pacman -S grub --noconfirm"
+      },
+      {
+        "#": "efibootmgr should be installed",
+        "?": "pacman -Q efibootmgr",
+        "!": "pacman -S efibootmgr --noconfirm"
       },
       {
         "#": "cifs-utils should be installed",
