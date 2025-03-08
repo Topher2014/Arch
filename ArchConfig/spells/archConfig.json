@@ -56,6 +56,11 @@
         "!": "useradd -m -k /dev/null -G wheel -p '$6$fx0yL9LuJDIaOXvx$ZaSShw8isgHGZ7L2oq8lPnYipHLsKZAI4CtGMi.3kWHp94CqhBzAk5X0986nTOLQP5xuQg4jbB7MTbG/WETJP1' topher"
       },
       {
+        "#": "Timezone should be set to Los Angeles",
+        "?": "test \"$(timedatectl show --property=Timezone --value)\" = \"America/Los_Angeles\"",
+        "!": "timedatectl set-timezone America/Los_Angeles"
+      },
+      {
         "#": "Root password should be set",
         "?": "passwd -S root | grep -q \"^root P \"",
         "!": "usermod -p '$6$L3tY667XH/Anwten$kc3mJ1wKPpW2Mpu3URDG3.Qdi3ujrTM51c2tw/Y4ZBShXDP1610n8QBqSQEBVVlXiJIVveA5Wfp0shhL44sR6/' root"
@@ -166,11 +171,6 @@
         "!": "find /tmp/visual-studio-code-bin -name \"VSCode-*.pkg.tar.zst\" -not -name \"*debug*\" | xargs pacman -U --noconfirm" 
       },
       {
-        "#": "user-dirs.dirs should exist in .config",
-        "?": "test -f /home/topher/.config/user-dirs.dirs",
-        "!": "su - topher -c 'curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.config/user-dirs.dirs >> /home/topher/.config/user-dirs.dirs'"
-      },
-      {
         "#": "user-dirs.locale should exist in .config",
         "?": "test -f /home/topher/.config/user-dirs.locale",
         "!": "su - topher -c 'locale | grep LANG | cut -d= -f2 | tr -d \"\\\"\" > ~/.config/user-dirs.locale'"
@@ -204,16 +204,6 @@
         "#": "Vi should be symlinked to Vim",
         "?": "test \"$(readlink -f $(which vim 2>/dev/null))\" = \"$(readlink -f $(which vi 2>/dev/null))\"",
         "!": "ln -s /usr/bin/vim /usr/bin/vi"
-      },
-      {
-        "#": "i3 config should exist in /home/topher/.config/i3",
-        "?": "test -f /home/topher/.config/i3/config",
-        "!": "su - topher -c 'mkdir /home/topher/.config/i3 && curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.config/i3/config >> /home/topher/.config/i3/config'"
-      },
-      {
-        "#": "i3blocks config should exist in /home/topher/.config/i3status",
-        "?": "test -f /home/topher/.config/i3blocks/config",
-        "!": "su - topher -c 'mkdir /home/topher/.config/i3blocks && curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.config/i3blocks/config >> /home/topher/.config/i3blocks/config'"
       },
       {
         "#": "urxvt font-resize plugin should exist",
@@ -261,9 +251,19 @@
         "!": "pacman -S xorg-server --noconfirm"
       },
       {
+        "#": "nmap should be installed",
+        "?": "pacman -Q nmap",
+        "!": "pacman -S nmap --noconfirm"
+      },
+      {
         "#": "i3 should be installed",
         "?": "pacman -Q i3-wm",
         "!": "pacman -S i3 --noconfirm"
+      },
+      {
+        "#": "libreoffice should be installed",
+        "?": "pacman -Q libreoffice",
+        "!": "pacman -S libreoffice --noconfirm"
       },
       {
         "#": "rxvt-unicode should be installed",
@@ -339,6 +339,21 @@
         "#": ".xinitrc should be symlinked",
         "?": "test -L /home/topher/.xinitrc",
         "!": "su - topher -c 'ln -s /home/topher/Desktop/Configs/xinitrc /home/topher/.xinitrc'"
+      },
+      {
+        "#": "user-dirs.dirs should be symlinked",
+        "?": "test -L /home/topher/.config/user-dirs.dirs",
+        "!": "su - topher -c 'ln -sf /home/topher/Desktop/Configs/.config/user-dirs.dirs /home/topher/.config/user-dirs.dirs'"
+      },
+      {
+        "#": "i3 should be symlinked",
+        "?": "test -L /home/topher/.config/i3/config",
+        "!": "su - topher -c 'mkdir -p /home/topher/.config/i3 && ln -s /home/topher/Desktop/Configs/.config/i3/config /home/topher/.config/i3/config'"
+      },
+      {
+        "#": "i3blocks should be symlinked",
+        "?": "test -L /home/topher/.config/i3blocks/config",
+        "!": "su - topher -c 'mkdir -p /home/topher/.config/i3blocks && ln -s /home/topher/Desktop/Configs/.config/i3blocks/config /home/topher/.config/i3blocks/config'"
       },
       {
         "#": ".vimrc should be symlinked",
