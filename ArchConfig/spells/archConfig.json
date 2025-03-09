@@ -16,11 +16,6 @@
         "!": "sed -i 's/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && locale-gen"
       },
       {
-        "#": "Steam should be installed",
-        "?": "pacman -Q steam",
-        "!": "pacman -S steam --noconfirm"
-      },
-      {
         "#": "Hostname should be set to topherDesktop",
         "?": "grep -qw \"topherDesktop\" /etc/hostname",
         "!": "echo \"topherDesktop\" | tee /etc/hostname"
@@ -39,11 +34,6 @@
         "#": "dhcpcd@ETHERNET.service should be started",
         "?": "systemctl is-active dhcpcd@$(ip -o link show | grep -E 'eth|enp|eno|ens' | head -n 1 | awk -F': ' '{print $2}').service",
         "!": "systemctl start dhcpcd@$(ip -o link show | grep -E 'eth|enp|eno|ens' | head -n 1 | awk -F': ' '{print $2}').service"
-      },
-      {
-        "#": "dhcpcd should be installed",
-        "?": "pacman -Q dhcpcd",
-        "!": "pacman -S dhcpcd --noconfirm"
       },
       {
         "#": "User 'topher' should exist",
@@ -81,9 +71,94 @@
         "!": "grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB"
       },
       {
+        "#": "Desktop directory exist",
+        "?": "test -d /home/topher/Desktop", 
+        "!": "su - topher -c 'mkdir /home/topher/Desktop'" 
+      },
+      {
         "#": "NAS drive should be mounted to Desktop",
         "?": "grep -q \"192.168.88.51:/share/desktop\" /proc/mounts",
-        "!": "mount 192.168.88.51:/share/desktop /home/topher/Desktop/ && genfstab -U /"
+        "!": "mount 192.168.88.51:/share/desktop /home/topher/Desktop/ && genfstab -U / > /etc/fstab && chown topher:topher /home/topher/Desktop"
+      },
+      {
+        "#": "user-dirs.locale should exist in .config",
+        "?": "test -f /home/topher/.config/user-dirs.locale",
+        "!": "su - topher -c 'locale | grep LANG | cut -d= -f2 | tr -d \"\\\"\" > ~/.config/user-dirs.locale'"
+      },
+      {
+        "#": "user-dirs.conf should exist in .config",
+        "?": "test -f /home/topher/.config/user-dirs.conf",
+        "!": "su - topher -c 'echo -e \"enabled=false\nmigrateold=false\" > ~/.config/user-dirs.conf'"
+      },
+      {
+        "#": "xdg-user-dirs-update --force should be ran after .config files and dirctories exist",
+        "?": "test -f /home/topher/.config/user-dirs.conf -a -f /home/topher/.config/user-dirs.locale -a -f /home/topher/.config/user-dirs.dirs -a -d /home/topher/Desktop",
+        "!": "su - topher -c 'source ~/.config/user-dirs.dirs && mkdir -p \"$XDG_DESKTOP_DIR\" \"$XDG_DOCUMENTS_DIR\" \"$XDG_DOWNLOADS_DIR\"'"
+      },
+      {
+        "#": "ssh keys should exist",
+        "?": "test -f /home/topher/.ssh/id_ed25519",
+        "!": "su - topher -c 'ssh-keygen -t ed25519 -C \"topherludlow@protonmail.com\" -f /home/topher/.ssh/id_ed25519 -N \"\"'"
+      },
+      {
+        "#": "wheel group should be allowed to run commands as root",
+        "?": "grep -E \"^%wheel ALL=\\(ALL:ALL\\) ALL\" /etc/sudoers",
+        "!": "sed -i 's/^# *%wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers"
+      },
+      {
+        "#": "urxvt font-resize plugin should exist",
+        "?": "test -f /home/topher/.urxvt/ext/resize-font",
+        "!": "su - topher -c 'mkdir -p /home/topher/.urxvt/ext && curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.urxvt/ext/resize-font >> /home/topher/.urxvt/ext/resize-font'"
+      },
+      {
+        "#": "Vi should be symlinked to Vim",
+        "?": "test \"$(readlink -f $(which vim 2>/dev/null))\" = \"$(readlink -f $(which vi 2>/dev/null))\"",
+        "!": "ln -s /usr/bin/vim /usr/bin/vi"
+      },
+      {
+        "#": ".Xresources should be symlinked",
+        "?": "test -L /home/topher/.Xresources",
+        "!": "su - topher -c 'ln -s /home/topher/Desktop/Configs/Xresources /home/topher/.Xresources'"
+      },
+      {
+        "#": ".bash_profile should be symlinked",
+        "?": "test -L /home/topher/.bash_profile",
+        "!": "su - topher -c 'ln -s /home/topher/Desktop/Configs/bash_profile /home/topher/.bash_profile'"
+      },
+      {
+        "#": ".bashrc should be symlinked",
+        "?": "test -L /home/topher/.bashrc",
+        "!": "su - topher -c 'ln -s /home/topher/Desktop/Configs/bashrc /home/topher/.bashrc'"
+      },
+      {
+        "#": ".gitconfig should be symlinked",
+        "?": "test -L /home/topher/.gitconfig",
+        "!": "su - topher -c 'ln -s /home/topher/Desktop/Configs/gitconfig /home/topher/.gitconfig'"
+      },
+      {
+        "#": ".xinitrc should be symlinked",
+        "?": "test -L /home/topher/.xinitrc",
+        "!": "su - topher -c 'ln -s /home/topher/Desktop/Configs/xinitrc /home/topher/.xinitrc'"
+      },
+      {
+        "#": "user-dirs.dirs should be symlinked",
+        "?": "test -L /home/topher/.config/user-dirs.dirs",
+        "!": "su - topher -c 'ln -sf /home/topher/Desktop/Configs/.config/user-dirs.dirs /home/topher/.config/user-dirs.dirs'"
+      },
+      {
+        "#": "i3 should be symlinked",
+        "?": "test -L /home/topher/.config/i3/config",
+        "!": "su - topher -c 'mkdir -p /home/topher/.config/i3 && ln -s /home/topher/Desktop/Configs/.config/i3/config /home/topher/.config/i3/config'"
+      },
+      {
+        "#": "i3blocks should be symlinked",
+        "?": "test -L /home/topher/.config/i3blocks/config",
+        "!": "su - topher -c 'mkdir -p /home/topher/.config/i3blocks && ln -s /home/topher/Desktop/Configs/.config/i3blocks/config /home/topher/.config/i3blocks/config'"
+      },
+      {
+        "#": ".vimrc should be symlinked",
+        "?": "test -L /home/topher/.vimrc",
+        "!": "su - topher -c 'ln -s /home/topher/Desktop/Configs/vimrc /home/topher/.vimrc'"
       },
       {
         "#": "Yay repo should be cloned to /tmp/yay",
@@ -146,46 +221,6 @@
         "!": "find /tmp/visual-studio-code-bin -name \"VSCode-*.pkg.tar.zst\" -not -name \"*debug*\" | xargs pacman -U --noconfirm" 
       },
       {
-        "#": "user-dirs.locale should exist in .config",
-        "?": "test -f /home/topher/.config/user-dirs.locale",
-        "!": "su - topher -c 'locale | grep LANG | cut -d= -f2 | tr -d \"\\\"\" > ~/.config/user-dirs.locale'"
-      },
-      {
-        "#": "user-dirs.conf should exist in .config",
-        "?": "test -f /home/topher/.config/user-dirs.conf",
-        "!": "su - topher -c 'echo -e \"enabled=false\nmigrateold=false\" > ~/.config/user-dirs.conf'"
-      },
-      {
-        "#": "Screenshots, Downloads, and Documents directories should exist",
-        "?": "test -d /home/topher/Desktop -a -d /home/topher/Desktop/Documents -a -d /home/topher/Desktop/Downloads -a -d /home/topher/Desktop/Screenshots",
-        "!": "su - topher -c 'mkdir -p Desktop/Documents && mkdir Desktop/Downloads && mkdir Desktop/Screenshots'"
-      },
-      {
-        "#": "xdg-user-dirs-update --force should be ran after .config files and dirctories exist",
-        "?": "test -f /home/topher/.config/user-dirs.conf -a -f /home/topher/.config/user-dirs.locale -a -f /home/topher/.config/user-dirs.dirs -a -d /home/topher/Desktop",
-        "!": "su - topher -c 'source ~/.config/user-dirs.dirs && mkdir -p \"$XDG_DESKTOP_DIR\" \"$XDG_DOCUMENTS_DIR\" \"$XDG_DOWNLOADS_DIR\"'"
-      },
-      {
-        "#": "ssh keys should exist",
-        "?": "test -f /home/topher/.ssh/id_ed25519",
-        "!": "su - topher -c 'ssh-keygen -t ed25519 -C \"topherludlow@protonmail.com\" -f /home/topher/.ssh/id_ed25519 -N \"\"'"
-      },
-      {
-        "#": "wheel group should be allowed to run commands as root",
-        "?": "grep -E \"^%wheel ALL=\\(ALL:ALL\\) ALL\" /etc/sudoers",
-        "!": "sed -i 's/^# *%wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers"
-      },
-      {
-        "#": "Vi should be symlinked to Vim",
-        "?": "test \"$(readlink -f $(which vim 2>/dev/null))\" = \"$(readlink -f $(which vi 2>/dev/null))\"",
-        "!": "ln -s /usr/bin/vim /usr/bin/vi"
-      },
-      {
-        "#": "urxvt font-resize plugin should exist",
-        "?": "test -f /home/topher/.urxvt/ext/resize-font",
-        "!": "su - topher -c 'mkdir -p /home/topher/.urxvt/ext && curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.urxvt/ext/resize-font >> /home/topher/.urxvt/ext/resize-font'"
-      },
-      {
         "#": "noto-fonts fonts should be installed",
         "?": "pacman -Q noto-fonts",
         "!": "pacman -S noto-fonts --noconfirm"
@@ -196,9 +231,19 @@
         "!": "pacman -S ttf-dejavu --noconfirm"
       },
       {
+        "#": "dhcpcd should be installed",
+        "?": "pacman -Q dhcpcd",
+        "!": "pacman -S dhcpcd --noconfirm"
+      },
+      {
         "#": "32 bit Nvidia drivers should be installed",
         "?": "pacman -Q lib32-nvidia-utils",
         "!": "pacman -S lib32-nvidia-utils --noconfirm"
+      },
+      {
+        "#": "Steam should be installed",
+        "?": "pacman -Q steam",
+        "!": "pacman -S steam --noconfirm"
       },
       {
         "#": "Git should be installed",
@@ -314,56 +359,6 @@
         "#": "docker should be installed",
         "?": "pacman -Q docker",
         "!": "pacman -S docker --noconfirm"
-      },
-      {
-        "#": "Config files should exist",
-        "?": "test -d /home/topher/Desktop/Configs",
-        "!": "su - topher -c 'curl -L https://github.com/Topher2014/Arch/archive/refs/heads/main.zip -o ~/Arch.zip && mkdir -p ~/Desktop && cd ~/ && unzip Arch.zip \"Arch-main/ConfigFiles/Configs/*\" -d ~/Desktop/ && mv ~/Desktop/Arch-main/ConfigFiles/Configs ~/Desktop/ && rm -rf ~/Desktop/Arch-main ~/Arch.zip'"
-      },
-      {
-        "#": ".Xresources should be symlinked",
-        "?": "test -L /home/topher/.Xresources",
-        "!": "su - topher -c 'ln -s /home/topher/Desktop/Configs/Xresources /home/topher/.Xresources'"
-      },
-      {
-        "#": ".bash_profile should be symlinked",
-        "?": "test -L /home/topher/.bash_profile",
-        "!": "su - topher -c 'ln -s /home/topher/Desktop/Configs/bash_profile /home/topher/.bash_profile'"
-      },
-      {
-        "#": ".bashrc should be symlinked",
-        "?": "test -L /home/topher/.bashrc",
-        "!": "su - topher -c 'ln -s /home/topher/Desktop/Configs/bashrc /home/topher/.bashrc'"
-      },
-      {
-        "#": ".gitconfig should be symlinked",
-        "?": "test -L /home/topher/.gitconfig",
-        "!": "su - topher -c 'ln -s /home/topher/Desktop/Configs/gitconfig /home/topher/.gitconfig'"
-      },
-      {
-        "#": ".xinitrc should be symlinked",
-        "?": "test -L /home/topher/.xinitrc",
-        "!": "su - topher -c 'ln -s /home/topher/Desktop/Configs/xinitrc /home/topher/.xinitrc'"
-      },
-      {
-        "#": "user-dirs.dirs should be symlinked",
-        "?": "test -L /home/topher/.config/user-dirs.dirs",
-        "!": "su - topher -c 'ln -sf /home/topher/Desktop/Configs/.config/user-dirs.dirs /home/topher/.config/user-dirs.dirs'"
-      },
-      {
-        "#": "i3 should be symlinked",
-        "?": "test -L /home/topher/.config/i3/config",
-        "!": "su - topher -c 'mkdir -p /home/topher/.config/i3 && ln -s /home/topher/Desktop/Configs/.config/i3/config /home/topher/.config/i3/config'"
-      },
-      {
-        "#": "i3blocks should be symlinked",
-        "?": "test -L /home/topher/.config/i3blocks/config",
-        "!": "su - topher -c 'mkdir -p /home/topher/.config/i3blocks && ln -s /home/topher/Desktop/Configs/.config/i3blocks/config /home/topher/.config/i3blocks/config'"
-      },
-      {
-        "#": ".vimrc should be symlinked",
-        "?": "test -L /home/topher/.vimrc",
-        "!": "su - topher -c 'ln -s /home/topher/Desktop/Configs/vimrc /home/topher/.vimrc'"
-      } 
+      }
     ]
-  }
+}
