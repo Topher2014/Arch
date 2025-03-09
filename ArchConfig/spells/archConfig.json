@@ -38,7 +38,7 @@
       {
         "#": "User 'topher' should exist",
         "?": "id topher",
-        "!": "useradd -m -k /dev/null -G wheel -p '$6$fx0yL9LuJDIaOXvx$ZaSShw8isgHGZ7L2oq8lPnYipHLsKZAI4CtGMi.3kWHp94CqhBzAk5X0986nTOLQP5xuQg4jbB7MTbG/WETJP1' topher"
+        "!": "useradd -G wheel -p '$6$fx0yL9LuJDIaOXvx$ZaSShw8isgHGZ7L2oq8lPnYipHLsKZAI4CtGMi.3kWHp94CqhBzAk5X0986nTOLQP5xuQg4jbB7MTbG/WETJP1' topher && chown -R topher:topher /home/topher"
       },
       {
         "#": "Timezone should be set to Los Angeles",
@@ -69,16 +69,6 @@
         "#": "grub modules should exist",
         "?": "test -d /boot/EFI",
         "!": "grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=Arch"
-      },
-      {
-        "#": "Desktop directory exist",
-        "?": "test -d /home/topher/Desktop", 
-        "!": "su - topher -c 'mkdir /home/topher/Desktop'" 
-      },
-      {
-        "#": "NAS drive should be mounted to Desktop",
-        "?": "grep -q \"192.168.88.51:/share/desktop\" /proc/mounts",
-        "!": "mount 192.168.88.51:/share/desktop /home/topher/Desktop/ && genfstab -U / > /etc/fstab && chown topher:topher /home/topher/Desktop"
       },
       {
         "#": "user-dirs.locale should exist in .config",
@@ -163,7 +153,7 @@
       {
         "#": "Yay repo should be cloned to /tmp/yay",
         "?": "pacman -Q yay >/dev/null || test -f /tmp/yay/PKGBUILD",
-        "!": "git clone https://aur.archlinux.org/yay.git /tmp/yay && chown -R topher:topher /tmp/yay"
+        "!": "id topher && git clone https://aur.archlinux.org/yay.git /tmp/yay && chown -R topher:topher /tmp/yay"
       },
       {
         "#": "Yay package should be built",
@@ -198,7 +188,7 @@
       {
         "#": "spotify should be installed",
         "?": "pacman -Q spotify",
-        "!": "find /tmp/yay -name \"spotify-*.pkg.tar.zst\" -not -name \"*debug*\" | xargs pacman -U --noconfirm" 
+        "!": "find /tmp/spotify -name \"spotify-*.pkg.tar.zst\" -not -name \"*debug*\" | xargs pacman -U --noconfirm" 
       },
       {
         "#": "VSCode PKGBUILD should be downloaded",
@@ -218,7 +208,7 @@
       {
         "#": "VSCode should be installed",
         "?": "pacman -Q code",
-        "!": "find /tmp/visual-studio-code-bin -name \"VSCode-*.pkg.tar.zst\" -not -name \"*debug*\" | xargs pacman -U --noconfirm" 
+        "!": "find /tmp/visual-studio-code-bin -name \"visual-studio-code-bin-*.pkg.tar.zst\" -not -name \"*debug*\" | xargs pacman -U --noconfirm" 
       },
       {
         "#": "noto-fonts fonts should be installed",
@@ -269,6 +259,11 @@
         "#": "efibootmgr should be installed",
         "?": "pacman -Q efibootmgr",
         "!": "pacman -S efibootmgr --noconfirm"
+      },
+      {
+        "#": "nfs-utils should be installed",
+        "?": "pacman -Q nfs-utils",
+        "!": "pacman -S nfs-utils --noconfirm"
       },
       {
         "#": "cifs-utils should be installed",

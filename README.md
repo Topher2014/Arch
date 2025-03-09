@@ -20,18 +20,21 @@ sudo dmsetup rename root OGroot
 cryptsetup -v luksFormat /dev/root_partition
 cryptsetup open /dev/root_partition root
 mkfs.ext4 /dev/mapper/root
-mount /dev/mapper/root /mnt
+mount /dev/mapper/root /root_mountpoint
 
 mkfs.fat -F 32 /dev/efi_system_partition
-mount --mkdir /dev/efi_system_partition /mnt/efi_system_partition
+mount --mkdir /dev/efi_system_partition /root_mountpoint/efi_system_partition
 
 mkswap /dev/swap_partition
+swapon /dev/swap_partition
 
-pacstrap -K /mnt base linux linux-firmware
+mount --mkdir 192.168.88.51:/share/desktop /root_mountpoint/home/topher/Desktop
 
-genfstab -U /mnt >> /mnt/etc/fstab
+pacstrap -K /root_mountpoint base linux linux-firmware
 
-arch-chroot /mnt
+genfstab -U /root_mountpoint > /root_mountpoint/etc/fstab
+
+arch-chroot /root_mountpoint
 
 Run the following command in Arch instance
 ```shell
