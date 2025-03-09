@@ -68,7 +68,7 @@
       {
         "#": "grub modules should exist",
         "?": "test -d /boot/EFI",
-        "!": "grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB"
+        "!": "grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=Arch"
       },
       {
         "#": "Desktop directory exist",
