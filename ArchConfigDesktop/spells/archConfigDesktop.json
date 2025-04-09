@@ -1,0 +1,364 @@
+{
+    "name": "archConfigDesktop",
+    "description": "A spell to configure a new Arch instance",
+    "identity": "topherludlow@protonmail.com",
+    "$schema": "https://spellcaster.sh/schema.json",
+    "license": "accept",
+    "trigraphs": [
+      {
+        "#": "multilib should be enabled in pacman conf",
+        "?": "grep -A1 '^\\[multilib\\]$' /etc/pacman.conf | grep -q '^Include = /etc/pacman.d/mirrorlist$'",
+        "!": "sed -i '/^#\\[multilib\\]/{N;s/^#\\[multilib\\]\\n#Include/[multilib]\\nInclude/}' /etc/pacman.conf && pacman -Sy --noconfirm" 
+      },
+      {
+        "#": "en_US.UTF-8 locale should be generated",
+        "?": "locale --all-locales | grep -q \"en_US.utf8\"",
+        "!": "sed -i 's/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && locale-gen"
+      },
+      {
+        "#": "Hostname should be set to topherDesktop",
+        "?": "grep -qw \"topherDesktop\" /etc/hostname",
+        "!": "echo \"topherDesktop\" | tee /etc/hostname"
+      },
+      {
+        "#": "Hosts should be set in /etc/hosts",
+        "?": "grep -qF -x \"127.0.0.1 localhost\" /etc/hosts && grep -qF -x \"::1 localhost\" /etc/hosts",
+        "!": "echo -e \"127.0.0.1 localhost\n::1 localhost\n\" | tee -a /etc/hosts"
+      },
+      {
+        "#": "dhcpcd@ETHERNET.service should be enabled",
+        "?": "systemctl is-enabled dhcpcd@$(ip -o link show | grep -E 'eth|enp|eno|ens' | head -n 1 | awk -F': ' '{print $2}').service",
+        "!": "systemctl enable dhcpcd@$(ip -o link show | grep -E 'eth|enp|eno|ens' | head -n 1 | awk -F': ' '{print $2}').service"
+      },
+      {
+        "#": "dhcpcd@ETHERNET.service should be started",
+        "?": "systemctl is-active dhcpcd@$(ip -o link show | grep -E 'eth|enp|eno|ens' | head -n 1 | awk -F': ' '{print $2}').service",
+        "!": "systemctl start dhcpcd@$(ip -o link show | grep -E 'eth|enp|eno|ens' | head -n 1 | awk -F': ' '{print $2}').service"
+      },
+      {
+        "#": "User 'topher' should exist",
+        "?": "id topher",
+        "!": "useradd -G wheel -p '$6$fx0yL9LuJDIaOXvx$ZaSShw8isgHGZ7L2oq8lPnYipHLsKZAI4CtGMi.3kWHp94CqhBzAk5X0986nTOLQP5xuQg4jbB7MTbG/WETJP1' topher && chown -R topher:topher /home/topher"
+      },
+      {
+        "#": "Timezone should be set to Los Angeles",
+        "?": "test \"$(timedatectl show --property=Timezone --value)\" = \"America/Los_Angeles\"",
+        "!": "timedatectl set-timezone America/Los_Angeles"
+      },
+      {
+        "#": "Root password should be set",
+        "?": "passwd -S root | grep -q \"^root P \"",
+        "!": "usermod -p '$6$L3tY667XH/Anwten$kc3mJ1wKPpW2Mpu3URDG3.Qdi3ujrTM51c2tw/Y4ZBShXDP1610n8QBqSQEBVVlXiJIVveA5Wfp0shhL44sR6/' root"
+      },
+      {
+        "#": "encrypt should be set in mkinitcpio.conf",
+        "?": "grep -q \"^HOOKS=.*[[:space:]]encrypt[[:space:]]\" /etc/mkinitcpio.conf",
+        "!": "sed -i 's/\\(^HOOKS=([^)]*block\\) \\(filesystems fsck\\)/\\1 encrypt \\2/' /etc/mkinitcpio.conf && mkinitcpio -P"
+      },
+      {
+        "#": "Kernel parameters should be set for decryption",
+        "?": "grep -q \"GRUB_CMDLINE_LINUX_DEFAULT=.*cryptdevice=UUID=.*:root\" /etc/default/grub",
+        "!": "sed -i \"s|GRUB_CMDLINE_LINUX_DEFAULT=\\\".*\\\"|GRUB_CMDLINE_LINUX_DEFAULT=\\\"quiet splash cryptdevice=UUID=`lsblk -o NAME,UUID,FSTYPE | grep -A4 \\\"^$(lsblk -o NAME,MOUNTPOINTS | grep -B3 \\\"/\\\" | grep \\\"^sd[a-z] \\\" | tail -1 | awk '{print $1}')\\\" | grep \\\"crypto_LUKS\\\" | awk '{print $2}'`:root root=/dev/mapper/root\\\"|\" /etc/default/grub && grub-mkconfig -o /boot/grub/grub.cfg"
+      },
+      {
+        "#": "Kernel parameters should be set for screen resolution",
+        "?": "grep -q \"^GRUB_GFXMODE=1280x1024x32,auto\" /etc/default/grub",
+        "!": "sed -i 's/^GRUB_GFXMODE=.*/GRUB_GFXMODE=1280x1024x32,auto/' /etc/default/grub"
+      },
+      {
+        "#": "grub modules should exist",
+        "?": "test -d /boot/EFI",
+        "!": "grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=Arch"
+      },
+      {
+        "#": "user-dirs.locale should exist in .config",
+        "?": "test -f /home/topher/.config/user-dirs.locale",
+        "!": "su - topher -c 'locale | grep LANG | cut -d= -f2 | tr -d \"\\\"\" > ~/.config/user-dirs.locale'"
+      },
+      {
+        "#": "user-dirs.conf should exist in .config",
+        "?": "test -f /home/topher/.config/user-dirs.conf",
+        "!": "su - topher -c 'echo -e \"enabled=false\nmigrateold=false\" > ~/.config/user-dirs.conf'"
+      },
+      {
+        "#": "xdg-user-dirs-update --force should be ran after .config files and dirctories exist",
+        "?": "test -f /home/topher/.config/user-dirs.conf -a -f /home/topher/.config/user-dirs.locale -a -f /home/topher/.config/user-dirs.dirs -a -d /home/topher/Desktop",
+        "!": "su - topher -c 'source ~/.config/user-dirs.dirs && mkdir -p \"$XDG_DESKTOP_DIR\" \"$XDG_DOCUMENTS_DIR\" \"$XDG_DOWNLOADS_DIR\"'"
+      },
+      {
+        "#": "ssh keys should exist",
+        "?": "test -f /home/topher/.ssh/id_ed25519",
+        "!": "su - topher -c 'ssh-keygen -t ed25519 -C \"topherludlow@protonmail.com\" -f /home/topher/.ssh/id_ed25519 -N \"\"'"
+      },
+      {
+        "#": "wheel group should be allowed to run commands as root",
+        "?": "grep -E \"^%wheel ALL=\\(ALL:ALL\\) ALL\" /etc/sudoers",
+        "!": "sed -i 's/^# *%wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers"
+      },
+      {
+        "#": "urxvt font-resize plugin should exist",
+        "?": "test -f /home/topher/.urxvt/ext/resize-font",
+        "!": "su - topher -c 'mkdir -p /home/topher/.urxvt/ext && curl https://raw.githubusercontent.com/Topher2014/Arch/refs/heads/main/ConfigFiles/home/topher/.urxvt/ext/resize-font >> /home/topher/.urxvt/ext/resize-font'"
+      },
+      {
+        "#": "Vi should be symlinked to Vim",
+        "?": "test \"$(readlink -f $(which vim 2>/dev/null))\" = \"$(readlink -f $(which vi 2>/dev/null))\"",
+        "!": "ln -s /usr/bin/vim /usr/bin/vi"
+      },
+      {
+        "#": ".Xresources should be symlinked",
+        "?": "test -L /home/topher/.Xresources",
+        "!": "su - topher -c 'ln -s /home/topher/Desktop/Configs/Xresources /home/topher/.Xresources'"
+      },
+      {
+        "#": ".bash_profile should be symlinked",
+        "?": "test -L /home/topher/.bash_profile",
+        "!": "su - topher -c 'ln -s /home/topher/Desktop/Configs/bash_profile /home/topher/.bash_profile'"
+      },
+      {
+        "#": ".bashrc should be symlinked",
+        "?": "test -L /home/topher/.bashrc",
+        "!": "su - topher -c 'ln -s /home/topher/Desktop/Configs/bashrc /home/topher/.bashrc'"
+      },
+      {
+        "#": ".gitconfig should be symlinked",
+        "?": "test -L /home/topher/.gitconfig",
+        "!": "su - topher -c 'ln -s /home/topher/Desktop/Configs/gitconfig /home/topher/.gitconfig'"
+      },
+      {
+        "#": ".xinitrc should be symlinked",
+        "?": "test -L /home/topher/.xinitrc",
+        "!": "su - topher -c 'ln -s /home/topher/Desktop/Configs/xinitrc /home/topher/.xinitrc'"
+      },
+      {
+        "#": "user-dirs.dirs should be symlinked",
+        "?": "test -L /home/topher/.config/user-dirs.dirs",
+        "!": "su - topher -c 'ln -sf /home/topher/Desktop/Configs/.config/user-dirs.dirs /home/topher/.config/user-dirs.dirs'"
+      },
+      {
+        "#": "i3 should be symlinked",
+        "?": "test -L /home/topher/.config/i3/config",
+        "!": "su - topher -c 'mkdir -p /home/topher/.config/i3 && ln -s /home/topher/Desktop/Configs/.config/i3/config /home/topher/.config/i3/config'"
+      },
+      {
+        "#": "i3blocks should be symlinked",
+        "?": "test -L /home/topher/.config/i3blocks/config",
+        "!": "su - topher -c 'mkdir -p /home/topher/.config/i3blocks && ln -s /home/topher/Desktop/Configs/.config/i3blocks/config /home/topher/.config/i3blocks/config'"
+      },
+      {
+        "#": ".vimrc should be symlinked",
+        "?": "test -L /home/topher/.vimrc",
+        "!": "su - topher -c 'ln -s /home/topher/Desktop/Configs/vimrc /home/topher/.vimrc'"
+      },
+      {
+        "#": "Yay repo should be cloned to /tmp/yay",
+        "?": "pacman -Q yay >/dev/null || test -f /tmp/yay/PKGBUILD",
+        "!": "id topher && git clone https://aur.archlinux.org/yay.git /tmp/yay && chown -R topher:topher /tmp/yay"
+      },
+      {
+        "#": "Yay package should be built",
+        "?": "pacman -Q yay >/dev/null || test -n \"$(find /tmp/yay -name \"yay-*-x86_64.pkg.tar.zst\" -not -name \"*debug*\")\"",
+        "!": "su - topher -c \"cd /tmp/yay && makepkg -s\""
+      },
+      {
+        "#": "Yay should be installed",
+        "?": "pacman -Q yay",
+        "!": "find /tmp/yay -name \"yay-*.pkg.tar.zst\" -not -name \"*debug*\" | xargs pacman -U --noconfirm" 
+      },
+      {
+        "#": "Yay dependencies should be installed",
+        "?": "pacman -Q yay >/dev/null || test -f /tmp/yay/PKGBUILD && grep \"^depends\\|^makedepends\" /tmp/yay/PKGBUILD | sed -e \"s/^depends=(//g\" -e \"s/^makedepends=(//g\" -e \"s/)$//g\" | tr \"'\" \" \" | awk '{print $1}' | sed 's/>.*$//' | xargs pacman -Q",
+        "!": "grep \"^depends\\|^makedepends\" /tmp/yay/PKGBUILD | sed -e \"s/^depends=(//g\" -e \"s/^makedepends=(//g\" -e \"s/)$//g\" | tr \"'\" \" \" | awk '{print $1}' | sed 's/>.*$//' | xargs pacman -S --noconfirm"
+      },
+      {
+        "#": "Spotify PKGBUILD should be downloaded",
+        "?": "pacman -Q spotify >/dev/null || test -f /tmp/spotify/PKGBUILD",
+        "!": "su - topher -c \"cd /tmp && yay -G spotify\""
+      },
+      {
+        "#": "Spotify package should be built",
+        "?": "pacman -Q spotify >/dev/null || test -n \"$(find /tmp/spotify -name \"spotify-*-x86_64.pkg.tar.zst\" -not -name \"*debug*\")\"",
+        "!": "su - topher -c \"cd /tmp/spotify && makepkg -s --skippgpcheck\""
+      },
+      {
+        "#": "Spotify dependencies should be installed",
+        "?": "pacman -Q spotify >/dev/null || test -f /tmp/spotify/PKGBUILD && grep \"^depends\\|^makedepends\" /tmp/spotify/PKGBUILD | sed -e \"s/^depends=(//g\" -e \"s/^makedepends=(//g\" -e \"s/)$//g\" | tr \"'\" \" \" | tr -s ' ' '\\n' | sed '/^$/d' | sed 's/>.*$//' | xargs pacman -Q",
+        "!": "grep \"^depends\\|^makedepends\" /tmp/spotify/PKGBUILD | sed -e \"s/^depends=(//g\" -e \"s/^makedepends=(//g\" -e \"s/)$//g\" | tr \"'\" \" \" | tr -s ' ' '\\n' | sed '/^$/d' | sed 's/>.*$//' | xargs pacman -S --noconfirm"
+      },
+      {
+        "#": "spotify should be installed",
+        "?": "pacman -Q spotify",
+        "!": "find /tmp/spotify -name \"spotify-*.pkg.tar.zst\" -not -name \"*debug*\" | xargs pacman -U --noconfirm" 
+      },
+      {
+        "#": "VSCode PKGBUILD should be downloaded",
+        "?": "pacman -Q code >/dev/null || test -f /tmp/visual-studio-code-bin/PKGBUILD",
+        "!": "su - topher -c \"cd /tmp && yay -G visual-studio-code-bin\""
+      },
+      {
+        "#": "VSCode package should be built",
+        "?": "pacman -Q code >/dev/null || test -n \"$(find /tmp/visual-studio-code-bin -name \"visual-studio-code-bin-*-x86_64.pkg.tar.zst\" -not -name \"*debug*\")\"",
+        "!": "su - topher -c \"cd /tmp/visual-studio-code-bin && makepkg -s --skippgpcheck\""
+      },
+      {
+        "#": "VSCode dependencies should be installed",
+        "?": "pacman -Q >/dev/null || test -f /tmp/visual-studio-code-bin/PKGBUILD && grep \"^depends\\|^makedepends\" /tmp/visual-studio-code-bin/PKGBUILD | sed -e \"s/^depends=(//g\" -e \"s/^makedepends=(//g\" -e \"s/)$//g\" | tr \"'\" \" \" | tr -s ' ' '\\n' | sed '/^$/d' | sed 's/>.*$//' | xargs pacman -Q",
+        "!": "grep \"^depends\\|^makedepends\" /tmp/visual-studio-code-bin/PKGBUILD | sed -e \"s/^depends=(//g\" -e \"s/^makedepends=(//g\" -e \"s/)$//g\" | tr \"'\" \" \" | tr -s ' ' '\\n' | sed '/^$/d' | sed 's/>.*$//' | xargs pacman -S --noconfirm"
+      },
+      {
+        "#": "VSCode should be installed",
+        "?": "pacman -Q code",
+        "!": "find /tmp/visual-studio-code-bin -name \"visual-studio-code-bin-*.pkg.tar.zst\" -not -name \"*debug*\" | xargs pacman -U --noconfirm" 
+      },
+      {
+        "#": "noto-fonts fonts should be installed",
+        "?": "pacman -Q noto-fonts",
+        "!": "pacman -S noto-fonts --noconfirm"
+      },
+      {
+        "#": "ttf-dejavu fonts should be installed",
+        "?": "pacman -Q ttf-dejavu",
+        "!": "pacman -S ttf-dejavu --noconfirm"
+      },
+      {
+        "#": "dhcpcd should be installed",
+        "?": "pacman -Q dhcpcd",
+        "!": "pacman -S dhcpcd --noconfirm"
+      },
+      {
+        "#": "32 bit Nvidia drivers should be installed",
+        "?": "pacman -Q lib32-nvidia-utils",
+        "!": "pacman -S lib32-nvidia-utils --noconfirm"
+      },
+      {
+        "#": "Steam should be installed",
+        "?": "pacman -Q steam",
+        "!": "pacman -S steam --noconfirm"
+      },
+      {
+        "#": "Git should be installed",
+        "?": "pacman -Q git",
+        "!": "pacman -S git --noconfirm"
+      },
+      {
+        "#": "Nvidia GPU drivers should be installed",
+        "?": "pacman -Q nvidia",
+        "!": "pacman -S nvidia --noconfirm"
+      },
+      {
+        "#": "base-devel should be installed",
+        "?": "pacman -Q base-devel",
+        "!": "pacman -S base-devel --noconfirm"
+      },
+      {
+        "#": "grub should be installed",
+        "?": "pacman -Q grub",
+        "!": "pacman -S grub --noconfirm"
+      },
+      {
+        "#": "efibootmgr should be installed",
+        "?": "pacman -Q efibootmgr",
+        "!": "pacman -S efibootmgr --noconfirm"
+      },
+      {
+        "#": "nfs-utils should be installed",
+        "?": "pacman -Q nfs-utils",
+        "!": "pacman -S nfs-utils --noconfirm"
+      },
+      {
+        "#": "cifs-utils should be installed",
+        "?": "pacman -Q cifs-utils",
+        "!": "pacman -S cifs-utils --noconfirm"
+      },
+      {
+        "#": "mpv should be installed",
+        "?": "pacman -Q mpv",
+        "!": "pacman -S mpv --noconfirm"
+      },
+      {
+        "#": "xclip should be installed",
+        "?": "pacman -Q xclip",
+        "!": "pacman -S xclip --noconfirm"
+      },
+      {
+        "#": "less should be installed",
+        "?": "pacman -Q less",
+        "!": "pacman -S less --noconfirm"
+      },
+      {
+        "#": "openssh should be installed",
+        "?": "pacman -Q openssh",
+        "!": "pacman -S openssh --noconfirm"
+      },
+      {
+        "#": "xorg-server should be installed",
+        "?": "pacman -Q xorg-server",
+        "!": "pacman -S xorg-server --noconfirm"
+      },
+      {
+        "#": "nmap should be installed",
+        "?": "pacman -Q nmap",
+        "!": "pacman -S nmap --noconfirm"
+      },
+      {
+        "#": "i3 should be installed",
+        "?": "pacman -Q i3-wm",
+        "!": "pacman -S i3 --noconfirm"
+      },
+      {
+        "#": "libreoffice should be installed",
+        "?": "pacman -Q libreoffice",
+        "!": "pacman -S libreoffice --noconfirm"
+      },
+      {
+        "#": "rxvt-unicode should be installed",
+        "?": "pacman -Q rxvt-unicode",
+        "!": "pacman -S rxvt-unicode --noconfirm"
+      },
+      {
+        "#": "firefox should be installed",
+        "?": "pacman -Q firefox",
+        "!": "pacman -S firefox --noconfirm"
+      },
+      {
+        "#": "gvim should be installed",
+        "?": "pacman -Q gvim",
+        "!": "pacman -S gvim --noconfirm"
+      },
+      {
+        "#": "xorg-xinit should be installed",
+        "?": "pacman -Q xorg-xinit",
+        "!": "pacman -S xorg-xinit --noconfirm"
+      },
+      {
+        "#": "dmenu should be installed",
+        "?": "pacman -Q dmenu",
+        "!": "pacman -S dmenu --noconfirm"
+      },
+      {
+        "#": "xorg-xrandr should be installed",
+        "?": "pacman -Q xorg-xrandr",
+        "!": "pacman -S xorg-xrandr --noconfirm"
+      },
+      {
+        "#": "pulseaudio should be installed",
+        "?": "pacman -Q pulseaudio",
+        "!": "pacman -S pulseaudio --noconfirm"
+      },
+      {
+        "#": "discord should be installed",
+        "?": "pacman -Q discord",
+        "!": "pacman -S discord --noconfirm"
+      },
+      {
+        "#": "docker should be installed",
+        "?": "pacman -Q docker",
+        "!": "pacman -S docker --noconfirm"
+      },
+      {
+        "#": "scrot should be installed",
+        "?": "pacman -Q scrot",
+        "!": "pacman -S scrot --noconfirm"
+      }
+    ]
+}

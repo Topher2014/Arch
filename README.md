@@ -29,6 +29,7 @@ mkswap /dev/swap_partition
 swapon /dev/swap_partition
 
 mount --mkdir 192.168.88.51:/share/desktop /root_mountpoint/home/topher/Desktop
+mount --mkdir 192.168.88.51:/share/.local /root_mountpoint/home/topher/.local
 
 pacstrap -K /root_mountpoint base linux linux-firmware
 
@@ -45,7 +46,6 @@ curl https://topher.spellcaster.sh/spells/archConfig | bash
 
 Run following command to create script
 ```shell
-cd ArchConfig && \
 find spells/ -name "*.json" -exec basename {} .json \; | xargs -I{} -P0 bash -c "curl -X DELETE https://topher.spellcaster.sh/spells/{}; curl -s -X POST https://topher.spellcaster.sh?persist=true --data-binary @spells/{}.json -H 'Content-Type: application/json' | tee scripts/{}.sh"
 ```
 
