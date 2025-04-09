@@ -36,6 +36,16 @@
         "!": "systemctl start dhcpcd@$(ip -o link show | grep -E 'eth|enp|eno|ens' | head -n 1 | awk -F': ' '{print $2}').service"
       },
       {
+        "#": "NetworkManager.service should be enabled",
+        "?": "systemctl is-enabled NetworkManager.service",
+        "!": "systemctl enable NetworkManager.service"
+      }, 
+      {
+        "#": "NetworkManager.service should be started",
+        "?": "systemctl is-active NetworkManager.service",
+        "!": "systemctl start NetworkManager.service"
+      },
+      {
         "#": "User 'topher' should exist",
         "?": "id topher",
         "!": "useradd -m -G wheel -p '$6$fx0yL9LuJDIaOXvx$ZaSShw8isgHGZ7L2oq8lPnYipHLsKZAI4CtGMi.3kWHp94CqhBzAk5X0986nTOLQP5xuQg4jbB7MTbG/WETJP1' topher && chown -R topher:topher /home/topher"
@@ -364,6 +374,11 @@
         "#": "docker should be installed",
         "?": "pacman -Q docker",
         "!": "pacman -S docker --noconfirm"
+      },
+      {
+        "#": "Network Manager should be installed",
+        "?": "pacman -Q networkmanager",
+        "!": "pacman -S networkmanager --noconfirm"
       },
       {
         "#": "scrot should be installed",
